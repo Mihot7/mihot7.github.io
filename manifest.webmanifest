@@ -1,0 +1,33 @@
+{
+  "name": "Bike Rider",
+  "short_name": "Bike Rider",
+  "id": "com.mihot7.bikerider",
+  "description": "",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": [{
+        "src": "słonecznik.png",
+        "sizes": "36x36"
+      },{
+        "src": "słonecznik.png",
+        "sizes": "48x48"
+      },{
+        "src": "słonecznik.png",
+        "sizes": "72x72"
+      },{
+        "src": "słonecznik.png",
+        "sizes": "96x96"
+      },{
+        "src": "słonecznik.png",
+        "sizes": "144x144"
+      },{
+        "src": "słonecznik.png",
+        "sizes": "192x192"
+      },{
+        "src": "słonecznik3.png",
+        "sizes": "512x512"
+      }]
+}
