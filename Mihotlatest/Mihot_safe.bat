@@ -160,7 +160,7 @@ pause
 goto console
 
 :ver
-echo Wersja systemu 8.1
+echo Wersja systemu 10.2
 echo Mihot Corp. 2014-2022
 echo Powered by MatOS
 echo I will miss you NotAdidel
