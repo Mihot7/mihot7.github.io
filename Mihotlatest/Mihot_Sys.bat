@@ -51,7 +51,7 @@ if %com%==testCrash set ERRORCODE=FORCED_TO_CRASH && goto error
 if %com%==MyCityLegacy goto graolka2&& pause>nul && goto console
 if %com%==notatki goto notatki&& pause>nul && goto console
 if %com%==creators goto creators&& pause>nul && goto console
-if %com%==update call Mihot_Update.bat&& pause>nul && goto console
+if %com%==update call Mihot_Update && goto console
 call %com%
 goto console
 
@@ -566,3 +566,7 @@ color 0a
 echo Pseudo zd. Pseudostudios - MatOS comodor
 ping localhost -n 5 >nul
 goto console
+
+
+:update
+call Mihot_Update.bat
