@@ -13,6 +13,7 @@ color 07
 type logo.txt
 echo.
 echo Starting Mihot X!...
+echo This version EOL is on 31.06.2023
 ping localhost -n 5 >nul
 chcp 65001
 call PlaySound "%mihot_sys_location%\sounds\startup.wav"
