@@ -1,1 +1,5 @@
 Mihot 10.2.1
+Changelog:
+Added: Option to upgrade update tool!
+changed Now update tool will show change log
+fixed: Updater bug
