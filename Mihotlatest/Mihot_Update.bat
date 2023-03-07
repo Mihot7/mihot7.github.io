@@ -142,4 +142,4 @@ call mihot_launcher.bat
 echo Wybrano update upgradera!
 call upgrade.vbs
 pause
-goto poczatek
+goto mihot
