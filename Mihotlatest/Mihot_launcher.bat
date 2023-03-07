@@ -7,8 +7,8 @@ echo ———————————————–
 echo Mihot Bootloader
 echo ———————————————–
 echo.
-echo 1) Uruchom (v10.2 (X))
-echo 2) Safe mode (bez modow) (v10.2(X))
+echo 1) Uruchom (v10.2.1 (X))
+echo 2) Safe mode (bez modow) (v10.2.1 (X))
 echo 3) mod manager (alpha)
 echo 4) KONIEC
 echo.
