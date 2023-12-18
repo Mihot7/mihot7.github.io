@@ -1,0 +1,10 @@
+Mihot 12 Alpha 1
+------------------------
+Developer Update
+------------------------
+18.12.2023
+------------------------
+1. Added WhatIsNew command - viev current version changelog
+2. Changed how "update" command works. Now it will show you new changelog!
+3. Removed fake Mihot Corp. branding (1st time after almost 5 years! lol)
+---------------------------------------------------------------------------
