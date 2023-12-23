@@ -1,1 +1,15 @@
-https://github.com/Mihot7/Mihot/releases/tag/12a4
+Mihot 12 Alpha 4
+------------------------
+Developer Update 
+------------------------
+23.12.2023
+------------------------
+1. BugFixes.
+2. Restored invalid command screen in order to fix "SpaceBug".
+3. Now when you set theme it's saved.
+4. New logo.
+5. New color
+6. Fixed MyCity game a bit.
+7. Merry x-mass!
+---------------------------------------------------------------------------
+Any idea how to name this update?
