@@ -1,12 +1,14 @@
-Mihot 12 Alpha 2
+Mihot 12 Alpha 3
 ------------------------
 Developer Update 
 ------------------------
-22.12.2023
+23.12.2023
 ------------------------
-1. Added BSOD when app meets a problem
-2. Changed welcome screen
-3. Added Mihot Music (Remastered version from MihotGUI)
-4. BugFixes
-5. MERRY X-MASS EVERYONE!!!!!
+This update was going to be 2nd critical bugfix realese but, I didn't wanted to post only bugfixes so.... here we go.... :D
+1. "Added" remastered themes. (There was 1 theme since version 3.1!)
+2. Removed command themePlus and replaced it with "theme" commmand.
+3. Changed startup sound to Longhorn one. (Microsoft don't sue me ok? PLS)
+4. Rewritten help
+5. BUGFIXES MANY OF THEM!!!!
+6. MERRY X-MASS EVERYONE!!!!!
 ---------------------------------------------------------------------------
