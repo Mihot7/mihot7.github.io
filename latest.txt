@@ -1,15 +1,25 @@
-Mihot 12 Alpha 4
+Mihot 12 
 ------------------------
-Developer Update 
+Colorful media update! 
 ------------------------
-23.12.2023
+31.12.2023
 ------------------------
-1. BugFixes.
-2. Restored invalid command screen in order to fix "SpaceBug".
-3. Now when you set theme it's saved.
-4. New logo.
-5. New color
-6. Fixed MyCity game a bit.
-7. Merry x-mass!
+1.  BugFixes.
+2.  Restored invalid command screen in order to fix "SpaceBug".
+3.  Now when you set theme it's saved.
+4.  New logo.
+5.  New default color
+6.  Fixed MyCity game a bit.
+7.  "Added" remastered themes. (There was 1 theme since version 3.1!)
+8.  Removed command themePlus and replaced it with "theme" commmand.
+9.  Changed startup sound to Longhorn one. (samsung don't sue me ok? PLS)
+10. Rewritten help
+11. Added BSOD when app meets a problem
+12. Changed welcome screen
+13. Added Mihot Music (Remastered version from MihotGUI)
+14. Added WhatIsNew command (It allows to see current version changelog)
+15. Now, "update" command opens browser with latest's verion changelog
+16. Removed fake Mihot Corporation branding.
+17. Happy new year!
 ---------------------------------------------------------------------------
-Any idea how to name this update?
+Btw, happy bday Mihot! MihotOS is now 5 years old it started in early 2019 the date is unknown but, lets make it 5 years ok?
