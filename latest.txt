@@ -1,10 +1,10 @@
-Mihot 12.1
+Mihot 14b2
 ------------------------
-Colorful media update! 
+Debug Update! 
 ------------------------
-17.01.2024
+01.03.2024
 ------------------------
-1. Remastered MyCity game.
-2. More games comming?
-3. Setted default color to 09 as it was planned.
+1. Small fixes
+2. Timetravell
+3. Overall clean up of files
 ---------------------------------------------------------------------------
