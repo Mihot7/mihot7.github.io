@@ -231,19 +231,11 @@ gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects2= [];
 gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects3= [];
 gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4= [];
 gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects5= [];
-
-gdjs.Downhill_32Bike_32DemoCode.conditionTrue_0 = {val:false};
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0 = {val:false};
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_0 = {val:false};
-gdjs.Downhill_32Bike_32DemoCode.condition2IsTrue_0 = {val:false};
-gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1 = {val:false};
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1 = {val:false};
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1 = {val:false};
-gdjs.Downhill_32Bike_32DemoCode.condition2IsTrue_1 = {val:false};
-gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2 = {val:false};
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2 = {val:false};
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2 = {val:false};
-gdjs.Downhill_32Bike_32DemoCode.condition2IsTrue_2 = {val:false};
+gdjs.Downhill_32Bike_32DemoCode.GDNewTextObjects1= [];
+gdjs.Downhill_32Bike_32DemoCode.GDNewTextObjects2= [];
+gdjs.Downhill_32Bike_32DemoCode.GDNewTextObjects3= [];
+gdjs.Downhill_32Bike_32DemoCode.GDNewTextObjects4= [];
+gdjs.Downhill_32Bike_32DemoCode.GDNewTextObjects5= [];
 
 
 gdjs.Downhill_32Bike_32DemoCode.eventsList0 = function(runtimeScene) {
@@ -258,10 +250,10 @@ gdjs.Downhill_32Bike_32DemoCode.eventsList0 = function(runtimeScene) {
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = !(gdjs.evtTools.systemInfo.isMobile());
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = !(gdjs.evtTools.systemInfo.isMobile());
+if (isConditionTrue_0) {
 {gdjs.evtTools.camera.hideLayer(runtimeScene, "Mobile");
 }}
 
@@ -271,10 +263,10 @@ gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = !(gdjs.evtTools.systemI
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.systemInfo.isMobile();
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.systemInfo.isMobile();
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Backward"), gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects2);
 gdjs.copyArray(gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects1, gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects2);
 
@@ -322,6 +314,7 @@ for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects2.length ;i <
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Seat"), gdjs.Downhill_32Bike_32DemoCode.GDSeatObjects2);
@@ -336,11 +329,12 @@ gdjs.copyArray(runtimeScene.getObjects("Seat"), gdjs.Downhill_32Bike_32DemoCode.
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("Crank"), gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2);
 gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[i].getPointX("Crank")), (gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[i].getPointY("Crank")), (gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2[0].getPointX("Centre")), (( gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2[0].getPointY("Centre")), false, 0, 0, 0, true, 10, 20, false, runtimeScene.getVariables().get("crank"));
+    gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[i].getPointX("Crank")), (gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[i].getPointY("Crank")), (gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2[0].getPointX("Centre")), (( gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2[0].getPointY("Centre")), false, 0, 0, 0, true, 10, 20, false, runtimeScene.getScene().getVariables().get("crank"));
 }
 }}
 
@@ -350,6 +344,7 @@ gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32Demo
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("FrontWheel"), gdjs.Downhill_32Bike_32DemoCode.GDFrontWheelObjects2);
 gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2);
@@ -364,11 +359,12 @@ gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32Demo
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("BackWheel"), gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2);
 gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[i].getBehavior("Physics2").addWheelJoint((gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[i].getPointX("RearWheelAxis")), (gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[i].getPointY("RearWheelAxis")), (gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2[0].getPointX("Centre")), (( gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2[0].getPointY("Centre")), 90, 14, 0.7, true, 1, 50, false, runtimeScene.getVariables().get("rearJoint"));
+    gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[i].getBehavior("Physics2").addWheelJoint((gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[i].getPointX("RearWheelAxis")), (gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[i].getPointY("RearWheelAxis")), (gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2[0].getPointX("Centre")), (( gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2[0].getPointY("Centre")), 90, 14, 0.7, true, 1, 50, false, runtimeScene.getScene().getVariables().get("rearJoint"));
 }
 }}
 
@@ -378,6 +374,7 @@ gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32Demo
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("BackWheel"), gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects2);
 gdjs.copyArray(runtimeScene.getObjects("RearSuspension"), gdjs.Downhill_32Bike_32DemoCode.GDRearSuspensionObjects2);
@@ -392,6 +389,7 @@ gdjs.copyArray(runtimeScene.getObjects("RearSuspension"), gdjs.Downhill_32Bike_3
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("Crank"), gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2);
 gdjs.copyArray(runtimeScene.getObjects("RPedal"), gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2);
@@ -406,6 +404,7 @@ gdjs.copyArray(runtimeScene.getObjects("RPedal"), gdjs.Downhill_32Bike_32DemoCod
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("Crank"), gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2);
 gdjs.copyArray(runtimeScene.getObjects("LPedal"), gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2);
@@ -427,11 +426,12 @@ gdjs.copyArray(runtimeScene.getObjects("LPedal"), gdjs.Downhill_32Bike_32DemoCod
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointX("SeatConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointY("SeatConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0].getPointX("Sit")), (( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0].getPointY("Sit")), true, 0, -(10), 10, false, 0, 0, false, runtimeScene.getVariables().get("torsoForce"));
+    gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointX("SeatConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointY("SeatConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0].getPointX("Sit")), (( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0].getPointY("Sit")), true, 0, -(10), 10, false, 0, 0, false, runtimeScene.getScene().getVariables().get("torsoForce"));
 }
 }}
 
@@ -441,11 +441,12 @@ gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("Head"), gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointX("UConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointY("UConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2[0].getPointX("Connect")), (( gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2[0].getPointY("Connect")), true, 0, -(20), 20, false, 0, 0, false, runtimeScene.getVariables().get("headConn"));
+    gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointX("UConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointY("UConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2[0].getPointX("Connect")), (( gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2[0].getPointY("Connect")), true, 0, -(20), 20, false, 0, 0, false, runtimeScene.getScene().getVariables().get("headConn"));
 }
 }}
 
@@ -455,11 +456,12 @@ gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("RightThigh"), gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointX("LConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointY("LConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[0].getPointX("UConnect")), (( gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[0].getPointY("UConnect")), false, 0, 100, -(45), false, 0, 0, false, runtimeScene.getVariables().get("rightThigh"));
+    gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointX("LConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointY("LConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[0].getPointX("UConnect")), (( gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[0].getPointY("UConnect")), false, 0, 100, -(45), false, 0, 0, false, runtimeScene.getScene().getVariables().get("rightThigh"));
 }
 }}
 
@@ -469,11 +471,12 @@ gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("LeftThigh"), gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointX("LConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointY("LConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[0].getPointX("UConnect")), (( gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[0].getPointY("UConnect")), false, 0, 100, -(45), false, 0, 0, false, runtimeScene.getVariables().get("leftThigh"));
+    gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointX("LConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[i].getPointY("LConnect")), (gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[0].getPointX("UConnect")), (( gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[0].getPointY("UConnect")), false, 0, 100, -(45), false, 0, 0, false, runtimeScene.getScene().getVariables().get("leftThigh"));
 }
 }}
 
@@ -483,11 +486,12 @@ gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("RightLeg"), gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2);
 gdjs.copyArray(runtimeScene.getObjects("RightThigh"), gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getPointX("Connect")), (gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getPointY("Connect")), (gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[0].getPointX("LConnect")), (( gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[0].getPointY("LConnect")), true, 0, -(130), 0, false, 0, 0, false, runtimeScene.getVariables().get("rightLeg"));
+    gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getPointX("Connect")), (gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getPointY("Connect")), (gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[0].getPointX("LConnect")), (( gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[0].getPointY("LConnect")), true, 0, -(130), 0, false, 0, 0, false, runtimeScene.getScene().getVariables().get("rightLeg"));
 }
 }}
 
@@ -497,11 +501,12 @@ gdjs.copyArray(runtimeScene.getObjects("RightThigh"), gdjs.Downhill_32Bike_32Dem
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("LeftLeg"), gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2);
 gdjs.copyArray(runtimeScene.getObjects("LeftThigh"), gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getPointX("Connect")), (gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getPointY("Connect")), (gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[0].getPointX("LConnect")), (( gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[0].getPointY("LConnect")), true, 0, -(130), 0, false, 0, 0, false, runtimeScene.getVariables().get("leftLeg"));
+    gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getPointX("Connect")), (gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getPointY("Connect")), (gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[0].getPointX("LConnect")), (( gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[0].getPointY("LConnect")), true, 0, -(130), 0, false, 0, 0, false, runtimeScene.getScene().getVariables().get("leftLeg"));
 }
 }}
 
@@ -511,11 +516,12 @@ gdjs.copyArray(runtimeScene.getObjects("LeftThigh"), gdjs.Downhill_32Bike_32Demo
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("LPedal"), gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2);
 gdjs.copyArray(runtimeScene.getObjects("LeftLeg"), gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getPointX("Pedal")), (gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getPointY("Pedal")), (gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2[0].getPointX("Center")), (( gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2[0].getPointY("Center")), false, 0, -(10), 10, false, 0, 0, false, runtimeScene.getVariables().get("ragdollLpedal"));
+    gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getPointX("Pedal")), (gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getPointY("Pedal")), (gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2[0].getPointX("Center")), (( gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDLPedalObjects2[0].getPointY("Center")), false, 0, -(10), 10, false, 0, 0, false, runtimeScene.getScene().getVariables().get("ragdollLpedal"));
 }
 }}
 
@@ -525,11 +531,12 @@ gdjs.copyArray(runtimeScene.getObjects("LeftLeg"), gdjs.Downhill_32Bike_32DemoCo
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("RPedal"), gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2);
 gdjs.copyArray(runtimeScene.getObjects("RightLeg"), gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getPointX("Pedal")), (gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getPointY("Pedal")), (gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2[0].getPointX("Center")), (( gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2[0].getPointY("Center")), false, 0, -(10), 10, false, 0, 0, false, runtimeScene.getVariables().get("ragdollRpedal"));
+    gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getPointX("Pedal")), (gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getPointY("Pedal")), (gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2[0].getPointX("Center")), (( gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDRPedalObjects2[0].getPointY("Center")), false, 0, -(10), 10, false, 0, 0, false, runtimeScene.getScene().getVariables().get("ragdollRpedal"));
 }
 }}
 
@@ -539,6 +546,7 @@ gdjs.copyArray(runtimeScene.getObjects("RightLeg"), gdjs.Downhill_32Bike_32DemoC
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("LUpperArm"), gdjs.Downhill_32Bike_32DemoCode.GDLUpperArmObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2);
@@ -553,6 +561,7 @@ gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("RUpperArm"), gdjs.Downhill_32Bike_32DemoCode.GDRUpperArmObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2);
@@ -567,6 +576,7 @@ gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("RArm"), gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects2);
 gdjs.copyArray(runtimeScene.getObjects("RUpperArm"), gdjs.Downhill_32Bike_32DemoCode.GDRUpperArmObjects2);
@@ -581,6 +591,7 @@ gdjs.copyArray(runtimeScene.getObjects("RUpperArm"), gdjs.Downhill_32Bike_32Demo
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("LArm"), gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects2);
 gdjs.copyArray(runtimeScene.getObjects("LUpperArm"), gdjs.Downhill_32Bike_32DemoCode.GDLUpperArmObjects2);
@@ -595,11 +606,12 @@ gdjs.copyArray(runtimeScene.getObjects("LUpperArm"), gdjs.Downhill_32Bike_32Demo
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("LArm"), gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects2);
 gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects2[i].getPointX("Handlebar")), (gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects2[i].getPointY("Handlebar")), (gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0].getPointX("Hands")), (( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0].getPointY("Hands")), false, 0, 0, 0, false, 0, 0, false, runtimeScene.getVariables().get("ragdollLhand"));
+    gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects2[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects2[i].getPointX("Handlebar")), (gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects2[i].getPointY("Handlebar")), (gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0].getPointX("Hands")), (( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0].getPointY("Hands")), false, 0, 0, 0, false, 0, 0, false, runtimeScene.getScene().getVariables().get("ragdollLhand"));
 }
 }}
 
@@ -609,11 +621,12 @@ gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32Demo
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1);
 gdjs.copyArray(runtimeScene.getObjects("RArm"), gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects1);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects1.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects1[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects1[i].getPointX("Handlebar")), (gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects1[i].getPointY("Handlebar")), (gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1[0].getPointX("Hands")), (( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1[0].getPointY("Hands")), false, 0, 0, 0, false, 0, 0, false, runtimeScene.getVariables().get("ragdollRhand"));
+    gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects1[i].getBehavior("Physics2").addRevoluteJointBetweenTwoBodies((gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects1[i].getPointX("Handlebar")), (gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects1[i].getPointY("Handlebar")), (gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1[0] : null), (( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1[0].getPointX("Hands")), (( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects1[0].getPointY("Hands")), false, 0, 0, 0, false, 0, 0, false, runtimeScene.getScene().getVariables().get("ragdollRhand"));
 }
 }}
 
@@ -632,18 +645,18 @@ gdjs.copyArray(runtimeScene.getObjects("RArm"), gdjs.Downhill_32Bike_32DemoCode.
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Brake"), gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Elapsed"), gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Forward"), gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Right"), gdjs.Downhill_32Bike_32DemoCode.GDRightObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Timing"), gdjs.Downhill_32Bike_32DemoCode.GDTimingObjects1);
-{runtimeScene.getVariables().getFromIndex(0).setNumber(3000);
-}{runtimeScene.getVariables().getFromIndex(1).setNumber(0);
-}{runtimeScene.getVariables().getFromIndex(7).setNumber(0.18);
+{runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(2500);
+}{runtimeScene.getScene().getVariables().getFromIndex(1).setNumber(0);
+}{runtimeScene.getScene().getVariables().getFromIndex(7).setNumber(0.18);
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects1.length ;i < len;++i) {
     gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects1[i].setX(gdjs.evtTools.window.getGameResolutionWidth(runtimeScene) - 40);
 }
@@ -675,11 +688,11 @@ gdjs.Downhill_32Bike_32DemoCode.eventsList0(runtimeScene);} //End of subevents
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(14)) <= 1000;
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().getFromIndex(15).sub(1);
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(14)) <= 1000;
+if (isConditionTrue_0) {
+{runtimeScene.getScene().getVariables().getFromIndex(15).sub(1);
 }}
 
 }
@@ -688,10 +701,10 @@ gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(15)) > 0;
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(15)) > 0;
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ForceIndicator"), gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4.length ;i < len;++i) {
     gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4[i].setFillColor("186;255;66");
@@ -704,10 +717,10 @@ gdjs.copyArray(runtimeScene.getObjects("ForceIndicator"), gdjs.Downhill_32Bike_3
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(15)) > 250;
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(15)) > 250;
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ForceIndicator"), gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4.length ;i < len;++i) {
     gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4[i].setFillColor("250;237;86");
@@ -720,10 +733,10 @@ gdjs.copyArray(runtimeScene.getObjects("ForceIndicator"), gdjs.Downhill_32Bike_3
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(15)) > 500;
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(15)) > 500;
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ForceIndicator"), gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4.length ;i < len;++i) {
     gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4[i].setFillColor("245;166;35");
@@ -736,10 +749,10 @@ gdjs.copyArray(runtimeScene.getObjects("ForceIndicator"), gdjs.Downhill_32Bike_3
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(15)) > 750;
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(15)) > 750;
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ForceIndicator"), gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4.length ;i < len;++i) {
     gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4[i].setFillColor("255;105;65");
@@ -752,10 +765,10 @@ gdjs.copyArray(runtimeScene.getObjects("ForceIndicator"), gdjs.Downhill_32Bike_3
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(14)) > 1000;
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(14)) > 1000;
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ForceIndicator"), gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4.length ;i < len;++i) {
     gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4[i].setFillColor("255;0;0");
@@ -768,11 +781,12 @@ gdjs.copyArray(runtimeScene.getObjects("ForceIndicator"), gdjs.Downhill_32Bike_3
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("Force"), gdjs.Downhill_32Bike_32DemoCode.GDForceObjects3);
 gdjs.copyArray(runtimeScene.getObjects("ForceIndicator"), gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects3);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects3[i].drawLine((( gdjs.Downhill_32Bike_32DemoCode.GDForceObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDForceObjects3[0].getX()) + 20, 125, (( gdjs.Downhill_32Bike_32DemoCode.GDForceObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDForceObjects3[0].getX()) + (gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(15)) / 3) + 20, 125, 16);
+    gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects3[i].drawLine((( gdjs.Downhill_32Bike_32DemoCode.GDForceObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDForceObjects3[0].getX()) + 20, 125, (( gdjs.Downhill_32Bike_32DemoCode.GDForceObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDForceObjects3[0].getX()) + (gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(15)) / 3) + 20, 125, 16);
 }
 }}
 
@@ -784,12 +798,12 @@ gdjs.copyArray(runtimeScene.getObjects("ForceIndicator"), gdjs.Downhill_32Bike_3
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.common.logicalNegation(false);
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.common.logicalNegation(false);
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3);
-{runtimeScene.getVariables().getFromIndex(13).setNumber((( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[0].getBehavior("Physics2").getJointReactionForce(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("torsoForce")))));
+{runtimeScene.getScene().getVariables().getFromIndex(13).setNumber((( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[0].getBehavior("Physics2").getJointReactionForce(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("torsoForce")))));
 }}
 
 }
@@ -805,14 +819,14 @@ gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(13)) > gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(14));
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(13)) > gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(14));
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ForceStrength"), gdjs.Downhill_32Bike_32DemoCode.GDForceStrengthObjects3);
-{runtimeScene.getVariables().getFromIndex(14).setNumber(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(13)));
+{runtimeScene.getScene().getVariables().getFromIndex(14).setNumber(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(13)));
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDForceStrengthObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDForceStrengthObjects3[i].setString(gdjs.evtTools.common.toString(Math.floor(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(14)))));
+    gdjs.Downhill_32Bike_32DemoCode.GDForceStrengthObjects3[i].setString(gdjs.evtTools.common.toString(Math.floor(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(14)))));
 }
 }}
 
@@ -829,11 +843,11 @@ gdjs.copyArray(runtimeScene.getObjects("ForceStrength"), gdjs.Downhill_32Bike_32
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(13)) > gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(15));
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().getFromIndex(15).setNumber(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(13)));
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(13)) > gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(15));
+if (isConditionTrue_0) {
+{runtimeScene.getScene().getVariables().getFromIndex(15).setNumber(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(13)));
 }}
 
 }
@@ -842,10 +856,10 @@ gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(15)) > 0;
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(15)) > 0;
+if (isConditionTrue_0) {
 
 { //Subevents
 gdjs.Downhill_32Bike_32DemoCode.eventsList2(runtimeScene);} //End of subevents
@@ -864,10 +878,10 @@ gdjs.Downhill_32Bike_32DemoCode.eventsList2(runtimeScene);} //End of subevents
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(13)) > 100;
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(13)) > 100;
+if (isConditionTrue_0) {
 {gdjs.deviceVibration.startVibration(50);
 }}
 
@@ -888,6 +902,7 @@ gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("LArm"), gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects3);
 gdjs.copyArray(runtimeScene.getObjects("LeftLeg"), gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects3);
@@ -895,19 +910,19 @@ gdjs.copyArray(runtimeScene.getObjects("RArm"), gdjs.Downhill_32Bike_32DemoCode.
 gdjs.copyArray(runtimeScene.getObjects("RightLeg"), gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects3);
 gdjs.copyArray(runtimeScene.getObjects("Seat"), gdjs.Downhill_32Bike_32DemoCode.GDSeatObjects3);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDSeatObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDSeatObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("torsoForce")));
+    gdjs.Downhill_32Bike_32DemoCode.GDSeatObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("torsoForce")));
 }
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("ragdollRpedal")));
+    gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("ragdollRpedal")));
 }
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("ragdollLpedal")));
+    gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("ragdollLpedal")));
 }
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("ragdollRhand")));
+    gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("ragdollRhand")));
 }
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("ragdollLhand")));
+    gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("ragdollLhand")));
 }
 }}
 
@@ -924,111 +939,31 @@ gdjs.copyArray(runtimeScene.getObjects("Seat"), gdjs.Downhill_32Bike_32DemoCode.
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("LeftLeg"), gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2);
 gdjs.copyArray(runtimeScene.getObjects("LeftThigh"), gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2);
 gdjs.copyArray(runtimeScene.getObjects("RightLeg"), gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2);
 gdjs.copyArray(runtimeScene.getObjects("RightThigh"), gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[i].getBehavior("Physics2").enableRevoluteJointLimits(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("rightThigh")), true);
+    gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[i].getBehavior("Physics2").enableRevoluteJointLimits(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("rightThigh")), true);
 }
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[i].getBehavior("Physics2").enableRevoluteJointLimits(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("leftThigh")), true);
+    gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[i].getBehavior("Physics2").enableRevoluteJointLimits(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("leftThigh")), true);
 }
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getBehavior("Physics2").enableRevoluteJointLimits(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("leftLeg")), true);
+    gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getBehavior("Physics2").enableRevoluteJointLimits(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("leftLeg")), true);
 }
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getBehavior("Physics2").enableRevoluteJointLimits(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("rightLeg")), true);
+    gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getBehavior("Physics2").enableRevoluteJointLimits(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("rightLeg")), true);
 }
 }}
 
 }
 
 
-};gdjs.Downhill_32Bike_32DemoCode.eventsList6 = function(runtimeScene) {
-
-};gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDHeadObjects2ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDTorsoObjects2ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDRArmObjects2ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDLArmObjects2ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDRUpperArmObjects2ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDLUpperArmObjects2Objects = Hashtable.newFrom({"Head": gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2, "Torso": gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2, "RArm": gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects2, "LArm": gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects2, "RUpperArm": gdjs.Downhill_32Bike_32DemoCode.GDRUpperArmObjects2, "LUpperArm": gdjs.Downhill_32Bike_32DemoCode.GDLUpperArmObjects2});
-gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDfloorObjects2ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDJumpObjects2Objects = Hashtable.newFrom({"floor": gdjs.Downhill_32Bike_32DemoCode.GDfloorObjects2, "Jump": gdjs.Downhill_32Bike_32DemoCode.GDJumpObjects2});
-gdjs.Downhill_32Bike_32DemoCode.eventsList7 = function(runtimeScene) {
-
-{
-
-
-
-}
-
-
-{
-
-
-{
-gdjs.copyArray(gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects2, gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects3);
-
-gdjs.copyArray(runtimeScene.getObjects("LeftLeg"), gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects3);
-gdjs.copyArray(gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects2, gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects3);
-
-gdjs.copyArray(runtimeScene.getObjects("RightLeg"), gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects3);
-gdjs.copyArray(runtimeScene.getObjects("Seat"), gdjs.Downhill_32Bike_32DemoCode.GDSeatObjects3);
-gdjs.copyArray(gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2, gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3);
-
-{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDSeatObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDSeatObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("torsoForce")));
-}
-}{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("ragdollRpedal")));
-}
-}{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("ragdollLpedal")));
-}
-}{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("ragdollRhand")));
-}
-}{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("ragdollLhand")));
-}
-}{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[i].getBehavior("Physics2").removeJoint(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("headcoll")));
-}
-}}
-
-}
-
-
-{
-
-
-
-}
-
-
-{
-
-
-{
-gdjs.copyArray(runtimeScene.getObjects("LeftLeg"), gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2);
-gdjs.copyArray(runtimeScene.getObjects("LeftThigh"), gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2);
-gdjs.copyArray(runtimeScene.getObjects("RightLeg"), gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2);
-gdjs.copyArray(runtimeScene.getObjects("RightThigh"), gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2);
-{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDRightThighObjects2[i].getBehavior("Physics2").enableRevoluteJointLimits(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("rightThigh")), true);
-}
-}{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDLeftThighObjects2[i].getBehavior("Physics2").enableRevoluteJointLimits(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("leftThigh")), true);
-}
-}{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDLeftLegObjects2[i].getBehavior("Physics2").enableRevoluteJointLimits(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("leftLeg")), true);
-}
-}{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDRightLegObjects2[i].getBehavior("Physics2").enableRevoluteJointLimits(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("rightLeg")), true);
-}
-}}
-
-}
-
-
-};gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDForwardObjects4Objects = Hashtable.newFrom({"Forward": gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects4});
-gdjs.Downhill_32Bike_32DemoCode.eventsList8 = function(runtimeScene) {
+};gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDForwardObjects4Objects = Hashtable.newFrom({"Forward": gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects4});
+gdjs.Downhill_32Bike_32DemoCode.eventsList6 = function(runtimeScene) {
 
 {
 
@@ -1041,16 +976,17 @@ gdjs.Downhill_32Bike_32DemoCode.eventsList8 = function(runtimeScene) {
 
 gdjs.copyArray(runtimeScene.getObjects("GameInstructions"), gdjs.Downhill_32Bike_32DemoCode.GDGameInstructionsObjects3);
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-for(var i = 0, k = 0, l = gdjs.Downhill_32Bike_32DemoCode.GDGameInstructionsObjects3.length;i<l;++i) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.Downhill_32Bike_32DemoCode.GDGameInstructionsObjects3.length;i<l;++i) {
     if ( gdjs.Downhill_32Bike_32DemoCode.GDGameInstructionsObjects3[i].isVisible() ) {
-        gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = true;
+        isConditionTrue_0 = true;
         gdjs.Downhill_32Bike_32DemoCode.GDGameInstructionsObjects3[k] = gdjs.Downhill_32Bike_32DemoCode.GDGameInstructionsObjects3[i];
         ++k;
     }
 }
-gdjs.Downhill_32Bike_32DemoCode.GDGameInstructionsObjects3.length = k;}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+gdjs.Downhill_32Bike_32DemoCode.GDGameInstructionsObjects3.length = k;
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("DesktopControls"), gdjs.Downhill_32Bike_32DemoCode.GDDesktopControlsObjects3);
 /* Reuse gdjs.Downhill_32Bike_32DemoCode.GDGameInstructionsObjects3 */
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDDesktopControlsObjects3.length ;i < len;++i) {
@@ -1064,40 +1000,38 @@ for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDGameInstructionsObjects3.
 }
 
 
-};gdjs.Downhill_32Bike_32DemoCode.eventsList9 = function(runtimeScene) {
+};gdjs.Downhill_32Bike_32DemoCode.eventsList7 = function(runtimeScene) {
 
 {
 
 gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects3.length = 0;
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects3_1final.length = 0;
+let isConditionTrue_1 = false;
+isConditionTrue_0 = false;
 {
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1 = gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0;
-gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects3_1final.length = 0;gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Up");
-if( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val ) {
-    gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = true;
+isConditionTrue_1 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Up");
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
 }
 }
 {
 gdjs.copyArray(runtimeScene.getObjects("Forward"), gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects4);
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2 = gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1;
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val = gdjs.evtTools.input.cursorOnObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDForwardObjects4Objects, runtimeScene, true, false);
-}if ( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val ) {
-{
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
-}}
-gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2.val = true && gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val && gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val;
+{let isConditionTrue_2 = false;
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.input.cursorOnObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDForwardObjects4Objects, runtimeScene, true, false);
+if (isConditionTrue_2) {
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 }
-if( gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val ) {
-    gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = true;
-    for(var j = 0, jLen = gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects4.length;j<jLen;++j) {
+isConditionTrue_1 = isConditionTrue_2;
+}
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+    for (let j = 0, jLen = gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects4.length; j < jLen ; ++j) {
         if ( gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects3_1final.indexOf(gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects4[j]) === -1 )
             gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects3_1final.push(gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects4[j]);
     }
@@ -1107,56 +1041,54 @@ if( gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val ) {
 gdjs.copyArray(gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects3_1final, gdjs.Downhill_32Bike_32DemoCode.GDForwardObjects3);
 }
 }
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("BackWheel"), gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3);
-{runtimeScene.getVariables().getFromIndex(1).add(100);
+{runtimeScene.getScene().getVariables().getFromIndex(1).add(100);
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3[i].getBehavior("Physics2").setWheelJointMaxMotorTorque(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("rearJoint")), 50);
+    gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3[i].getBehavior("Physics2").setWheelJointMaxMotorTorque(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("rearJoint")), 300);
 }
-}{runtimeScene.getVariables().getFromIndex(2).setNumber(1);
+}{runtimeScene.getScene().getVariables().getFromIndex(2).setNumber(1);
 }
 { //Subevents
-gdjs.Downhill_32Bike_32DemoCode.eventsList8(runtimeScene);} //End of subevents
+gdjs.Downhill_32Bike_32DemoCode.eventsList6(runtimeScene);} //End of subevents
 }
 
 }
 
 
-};gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDBackwardObjects4Objects = Hashtable.newFrom({"Backward": gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects4});
-gdjs.Downhill_32Bike_32DemoCode.eventsList10 = function(runtimeScene) {
+};gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDBackwardObjects4Objects = Hashtable.newFrom({"Backward": gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects4});
+gdjs.Downhill_32Bike_32DemoCode.eventsList8 = function(runtimeScene) {
 
 {
 
 gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects3.length = 0;
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects3_1final.length = 0;
+let isConditionTrue_1 = false;
+isConditionTrue_0 = false;
 {
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1 = gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0;
-gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects3_1final.length = 0;gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Down");
-if( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val ) {
-    gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = true;
+isConditionTrue_1 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Down");
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
 }
 }
 {
 gdjs.copyArray(runtimeScene.getObjects("Backward"), gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects4);
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2 = gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1;
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val = gdjs.evtTools.input.cursorOnObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDBackwardObjects4Objects, runtimeScene, true, false);
-}if ( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val ) {
-{
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
-}}
-gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2.val = true && gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val && gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val;
+{let isConditionTrue_2 = false;
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.input.cursorOnObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDBackwardObjects4Objects, runtimeScene, true, false);
+if (isConditionTrue_2) {
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 }
-if( gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val ) {
-    gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = true;
-    for(var j = 0, jLen = gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects4.length;j<jLen;++j) {
+isConditionTrue_1 = isConditionTrue_2;
+}
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+    for (let j = 0, jLen = gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects4.length; j < jLen ; ++j) {
         if ( gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects3_1final.indexOf(gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects4[j]) === -1 )
             gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects3_1final.push(gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects4[j]);
     }
@@ -1166,23 +1098,23 @@ if( gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val ) {
 gdjs.copyArray(gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects3_1final, gdjs.Downhill_32Bike_32DemoCode.GDBackwardObjects3);
 }
 }
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("BackWheel"), gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3);
-{runtimeScene.getVariables().getFromIndex(1).sub(100);
+{runtimeScene.getScene().getVariables().getFromIndex(1).sub(100);
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3[i].getBehavior("Physics2").setWheelJointMaxMotorTorque(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("rearJoint")), 50);
+    gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3[i].getBehavior("Physics2").setWheelJointMaxMotorTorque(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("rearJoint")), 50);
 }
-}{runtimeScene.getVariables().getFromIndex(2).setNumber(1);
+}{runtimeScene.getScene().getVariables().getFromIndex(2).setNumber(1);
 }}
 
 }
 
 
-};gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDBrakeObjects4Objects = Hashtable.newFrom({"Brake": gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects4});
-gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDRightObjects4Objects = Hashtable.newFrom({"Right": gdjs.Downhill_32Bike_32DemoCode.GDRightObjects4});
-gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDLeftObjects4Objects = Hashtable.newFrom({"Left": gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects4});
-gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDRetryObjects3Objects = Hashtable.newFrom({"Retry": gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects3});
-gdjs.Downhill_32Bike_32DemoCode.eventsList11 = function(runtimeScene) {
+};gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDBrakeObjects4Objects = Hashtable.newFrom({"Brake": gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects4});
+gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDRightObjects4Objects = Hashtable.newFrom({"Right": gdjs.Downhill_32Bike_32DemoCode.GDRightObjects4});
+gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDLeftObjects4Objects = Hashtable.newFrom({"Left": gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects4});
+gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDRetryObjects3Objects = Hashtable.newFrom({"Retry": gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects3});
+gdjs.Downhill_32Bike_32DemoCode.eventsList9 = function(runtimeScene) {
 
 {
 
@@ -1194,11 +1126,11 @@ gdjs.Downhill_32Bike_32DemoCode.eventsList11 = function(runtimeScene) {
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.common.logicalNegation(false);
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().getFromIndex(2).setNumber(0);
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.common.logicalNegation(false);
+if (isConditionTrue_0) {
+{runtimeScene.getScene().getVariables().getFromIndex(2).setNumber(0);
 }}
 
 }
@@ -1214,13 +1146,13 @@ gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.common.lo
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(1)) < gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(0));
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(1)) < gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0));
+if (isConditionTrue_0) {
 
 { //Subevents
-gdjs.Downhill_32Bike_32DemoCode.eventsList9(runtimeScene);} //End of subevents
+gdjs.Downhill_32Bike_32DemoCode.eventsList7(runtimeScene);} //End of subevents
 }
 
 }
@@ -1236,13 +1168,13 @@ gdjs.Downhill_32Bike_32DemoCode.eventsList9(runtimeScene);} //End of subevents
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(1)) > -(500);
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(1)) > -(500);
+if (isConditionTrue_0) {
 
 { //Subevents
-gdjs.Downhill_32Bike_32DemoCode.eventsList10(runtimeScene);} //End of subevents
+gdjs.Downhill_32Bike_32DemoCode.eventsList8(runtimeScene);} //End of subevents
 }
 
 }
@@ -1258,11 +1190,11 @@ gdjs.Downhill_32Bike_32DemoCode.eventsList10(runtimeScene);} //End of subevents
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(2)) == 0;
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().getFromIndex(1).mul(0.99);
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(2)) == 0;
+if (isConditionTrue_0) {
+{runtimeScene.getScene().getVariables().getFromIndex(1).mul(0.99);
 }}
 
 }
@@ -1280,33 +1212,31 @@ gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.
 gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects3.length = 0;
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects3_1final.length = 0;
+let isConditionTrue_1 = false;
+isConditionTrue_0 = false;
 {
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1 = gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0;
-gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects3_1final.length = 0;gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Space");
-if( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val ) {
-    gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = true;
+isConditionTrue_1 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Space");
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
 }
 }
 {
 gdjs.copyArray(runtimeScene.getObjects("Brake"), gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects4);
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2 = gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1;
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val = gdjs.evtTools.input.cursorOnObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDBrakeObjects4Objects, runtimeScene, true, false);
-}if ( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val ) {
-{
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
-}}
-gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2.val = true && gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val && gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val;
+{let isConditionTrue_2 = false;
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.input.cursorOnObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDBrakeObjects4Objects, runtimeScene, true, false);
+if (isConditionTrue_2) {
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 }
-if( gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val ) {
-    gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = true;
-    for(var j = 0, jLen = gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects4.length;j<jLen;++j) {
+isConditionTrue_1 = isConditionTrue_2;
+}
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+    for (let j = 0, jLen = gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects4.length; j < jLen ; ++j) {
         if ( gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects3_1final.indexOf(gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects4[j]) === -1 )
             gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects3_1final.push(gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects4[j]);
     }
@@ -1316,14 +1246,14 @@ if( gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val ) {
 gdjs.copyArray(gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects3_1final, gdjs.Downhill_32Bike_32DemoCode.GDBrakeObjects3);
 }
 }
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("BackWheel"), gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3);
-{runtimeScene.getVariables().getFromIndex(1).setNumber(0);
+{runtimeScene.getScene().getVariables().getFromIndex(1).setNumber(0);
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3[i].getBehavior("Physics2").setWheelJointMaxMotorTorque(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("rearJoint")), 1000);
+    gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3[i].getBehavior("Physics2").setWheelJointMaxMotorTorque(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("rearJoint")), 1000);
 }
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3[i].getBehavior("Physics2").setWheelJointMotorSpeed(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("rearJoint")), 0);
+    gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3[i].getBehavior("Physics2").setWheelJointMotorSpeed(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("rearJoint")), 0);
 }
 }}
 
@@ -1342,33 +1272,31 @@ gdjs.copyArray(runtimeScene.getObjects("BackWheel"), gdjs.Downhill_32Bike_32Demo
 gdjs.Downhill_32Bike_32DemoCode.GDRightObjects3.length = 0;
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{gdjs.Downhill_32Bike_32DemoCode.GDRightObjects3_1final.length = 0;
+let isConditionTrue_1 = false;
+isConditionTrue_0 = false;
 {
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1 = gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0;
-gdjs.Downhill_32Bike_32DemoCode.GDRightObjects3_1final.length = 0;gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Right");
-if( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val ) {
-    gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = true;
+isConditionTrue_1 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Right");
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
 }
 }
 {
 gdjs.copyArray(runtimeScene.getObjects("Right"), gdjs.Downhill_32Bike_32DemoCode.GDRightObjects4);
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2 = gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1;
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val = gdjs.evtTools.input.cursorOnObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDRightObjects4Objects, runtimeScene, true, false);
-}if ( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val ) {
-{
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
-}}
-gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2.val = true && gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val && gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val;
+{let isConditionTrue_2 = false;
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.input.cursorOnObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDRightObjects4Objects, runtimeScene, true, false);
+if (isConditionTrue_2) {
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 }
-if( gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val ) {
-    gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = true;
-    for(var j = 0, jLen = gdjs.Downhill_32Bike_32DemoCode.GDRightObjects4.length;j<jLen;++j) {
+isConditionTrue_1 = isConditionTrue_2;
+}
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+    for (let j = 0, jLen = gdjs.Downhill_32Bike_32DemoCode.GDRightObjects4.length; j < jLen ; ++j) {
         if ( gdjs.Downhill_32Bike_32DemoCode.GDRightObjects3_1final.indexOf(gdjs.Downhill_32Bike_32DemoCode.GDRightObjects4[j]) === -1 )
             gdjs.Downhill_32Bike_32DemoCode.GDRightObjects3_1final.push(gdjs.Downhill_32Bike_32DemoCode.GDRightObjects4[j]);
     }
@@ -1378,7 +1306,7 @@ if( gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val ) {
 gdjs.copyArray(gdjs.Downhill_32Bike_32DemoCode.GDRightObjects3_1final, gdjs.Downhill_32Bike_32DemoCode.GDRightObjects3);
 }
 }
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects3);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects3.length ;i < len;++i) {
     gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects3[i].getBehavior("Physics2").applyTorque(38);
@@ -1393,33 +1321,31 @@ gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32Demo
 gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects3.length = 0;
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects3_1final.length = 0;
+let isConditionTrue_1 = false;
+isConditionTrue_0 = false;
 {
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1 = gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0;
-gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects3_1final.length = 0;gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Left");
-if( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val ) {
-    gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = true;
+isConditionTrue_1 = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Left");
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
 }
 }
 {
 gdjs.copyArray(runtimeScene.getObjects("Left"), gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects4);
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2 = gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1;
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val = gdjs.evtTools.input.cursorOnObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDLeftObjects4Objects, runtimeScene, true, false);
-}if ( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val ) {
-{
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
-}}
-gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2.val = true && gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val && gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val;
+{let isConditionTrue_2 = false;
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.input.cursorOnObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDLeftObjects4Objects, runtimeScene, true, false);
+if (isConditionTrue_2) {
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 }
-if( gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val ) {
-    gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = true;
-    for(var j = 0, jLen = gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects4.length;j<jLen;++j) {
+isConditionTrue_1 = isConditionTrue_2;
+}
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+    for (let j = 0, jLen = gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects4.length; j < jLen ; ++j) {
         if ( gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects3_1final.indexOf(gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects4[j]) === -1 )
             gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects3_1final.push(gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects4[j]);
     }
@@ -1429,7 +1355,7 @@ if( gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val ) {
 gdjs.copyArray(gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects3_1final, gdjs.Downhill_32Bike_32DemoCode.GDLeftObjects3);
 }
 }
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects3);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects3.length ;i < len;++i) {
     gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects3[i].getBehavior("Physics2").applyTorque(-(38));
@@ -1449,10 +1375,11 @@ gdjs.copyArray(runtimeScene.getObjects("MainFrame"), gdjs.Downhill_32Bike_32Demo
 {
 
 
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("BackWheel"), gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3);
 {for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3[i].getBehavior("Physics2").setWheelJointMotorSpeed(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("rearJoint")), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(1)));
+    gdjs.Downhill_32Bike_32DemoCode.GDBackWheelObjects3[i].getBehavior("Physics2").setWheelJointMotorSpeed(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("rearJoint")), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(1)));
 }
 }}
 
@@ -1471,33 +1398,31 @@ gdjs.copyArray(runtimeScene.getObjects("BackWheel"), gdjs.Downhill_32Bike_32Demo
 gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects2.length = 0;
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+{gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects2_1final.length = 0;
+let isConditionTrue_1 = false;
+isConditionTrue_0 = false;
 {
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1 = gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0;
-gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects2_1final.length = 0;gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val = gdjs.evtTools.input.isKeyPressed(runtimeScene, "Escape");
-if( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_1.val ) {
-    gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = true;
+isConditionTrue_1 = gdjs.evtTools.input.wasKeyReleased(runtimeScene, "Escape");
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
 }
 }
 {
 gdjs.copyArray(runtimeScene.getObjects("Retry"), gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects3);
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2 = gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1;
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val = gdjs.evtTools.input.cursorOnObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDRetryObjects3Objects, runtimeScene, true, false);
-}if ( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val ) {
-{
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
-}}
-gdjs.Downhill_32Bike_32DemoCode.conditionTrue_2.val = true && gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_2.val && gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_2.val;
+{let isConditionTrue_2 = false;
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.input.cursorOnObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDRetryObjects3Objects, runtimeScene, true, false);
+if (isConditionTrue_2) {
+isConditionTrue_2 = false;
+isConditionTrue_2 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }
-if( gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val ) {
-    gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = true;
-    for(var j = 0, jLen = gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects3.length;j<jLen;++j) {
+isConditionTrue_1 = isConditionTrue_2;
+}
+if(isConditionTrue_1) {
+    isConditionTrue_0 = true;
+    for (let j = 0, jLen = gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects3.length; j < jLen ; ++j) {
         if ( gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects2_1final.indexOf(gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects3[j]) === -1 )
             gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects2_1final.push(gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects3[j]);
     }
@@ -1507,25 +1432,158 @@ if( gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_1.val ) {
 gdjs.copyArray(gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects2_1final, gdjs.Downhill_32Bike_32DemoCode.GDRetryObjects2);
 }
 }
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Downhill Bike Demo", false);
 }}
 
 }
 
 
-};gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDfloorObjects3ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDJumpObjects3Objects = Hashtable.newFrom({"floor": gdjs.Downhill_32Bike_32DemoCode.GDfloorObjects3, "Jump": gdjs.Downhill_32Bike_32DemoCode.GDJumpObjects3});
+};gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDfloorObjects3ObjectsGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDJumpObjects3Objects = Hashtable.newFrom({"floor": gdjs.Downhill_32Bike_32DemoCode.GDfloorObjects3, "Jump": gdjs.Downhill_32Bike_32DemoCode.GDJumpObjects3});
+gdjs.Downhill_32Bike_32DemoCode.eventsList10 = function(runtimeScene) {
+
+{
+
+
+let isConditionTrue_0 = false;
+{
+/* Reuse gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3 */
+{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3.length ;i < len;++i) {
+    gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3[i].setPosition(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(8)),gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(9)));
+}
+}{gdjs.evtTools.camera.centerCamera(runtimeScene, (gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3[0] : null), true, "", 0);
+}}
+
+}
+
+
+};gdjs.Downhill_32Bike_32DemoCode.eventsList11 = function(runtimeScene) {
+
+{
+
+
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Jump"), gdjs.Downhill_32Bike_32DemoCode.GDJumpObjects3);
+gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3);
+gdjs.copyArray(runtimeScene.getObjects("floor"), gdjs.Downhill_32Bike_32DemoCode.GDfloorObjects3);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.object.raycastObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDfloorObjects3ObjectsGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDJumpObjects3Objects, (( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[0].getPointX("Center")), (( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[0].getPointY("Center")), 90, 5000, runtimeScene.getScene().getVariables().getFromIndex(6), runtimeScene.getScene().getVariables().getFromIndex(4), true);
+if (isConditionTrue_0) {
+/* Reuse gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3 */
+{runtimeScene.getScene().getVariables().getFromIndex(5).setNumber((gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(4)) - ((( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[0].getPointY("")) - 600)));
+}{gdjs.evtTools.camera.setCameraZoom(runtimeScene, (300 / gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(5))), "", 0);
+}}
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.common.logicalNegation(false);
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Follow"), gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3);
+gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3);
+{runtimeScene.getScene().getVariables().getFromIndex(8).setNumber(gdjs.evtTools.common.lerp((( gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3[0].getPointX("")), (( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[0].getPointX("")), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(7))));
+}{runtimeScene.getScene().getVariables().getFromIndex(9).setNumber(gdjs.evtTools.common.lerp((( gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3[0].getPointY("")), (( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[0].getPointY("")), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(7))));
+}
+{ //Subevents
+gdjs.Downhill_32Bike_32DemoCode.eventsList10(runtimeScene);} //End of subevents
+}
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+{
+gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2);
+{gdjs.evtTools.camera.setCameraX(runtimeScene, ((( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[0].getPointX("")) + 900) / 100, "Background", 0);
+}}
+
+}
+
+
+};gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDFrontWheelObjects2Objects = Hashtable.newFrom({"FrontWheel": gdjs.Downhill_32Bike_32DemoCode.GDFrontWheelObjects2});
+gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDStartObjects2Objects = Hashtable.newFrom({"Start": gdjs.Downhill_32Bike_32DemoCode.GDStartObjects2});
+gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDFrontWheelObjects1Objects = Hashtable.newFrom({"FrontWheel": gdjs.Downhill_32Bike_32DemoCode.GDFrontWheelObjects1});
+gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDWinObjects1Objects = Hashtable.newFrom({"Win": gdjs.Downhill_32Bike_32DemoCode.GDWinObjects1});
 gdjs.Downhill_32Bike_32DemoCode.eventsList12 = function(runtimeScene) {
 
 {
 
+gdjs.copyArray(runtimeScene.getObjects("FrontWheel"), gdjs.Downhill_32Bike_32DemoCode.GDFrontWheelObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Start"), gdjs.Downhill_32Bike_32DemoCode.GDStartObjects2);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDFrontWheelObjects2Objects, gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDStartObjects2Objects, false, runtimeScene, false);
+if (isConditionTrue_0) {
+{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "elapsedTimer");
+}}
+
+}
+
 
 {
-/* Reuse gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3 */
-{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3[i].setPosition(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(8)),gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(9)));
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(11)) == 0;
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Elapsed"), gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects2);
+{runtimeScene.getScene().getVariables().getFromIndex(12).setNumber(gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSeconds(runtimeScene, "elapsedTimer"));
+}{runtimeScene.getScene().getVariables().getFromIndex(12).setString(gdjs.evtTools.string.subStr(gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(12))), 0, 5));
+}{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects2.length ;i < len;++i) {
+    gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects2[i].setString(gdjs.evtTools.variable.getVariableString(runtimeScene.getScene().getVariables().getFromIndex(12)));
 }
-}{gdjs.evtTools.camera.centerCamera(runtimeScene, (gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3.length !== 0 ? gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3[0] : null), true, "", 0);
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("FrontWheel"), gdjs.Downhill_32Bike_32DemoCode.GDFrontWheelObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Win"), gdjs.Downhill_32Bike_32DemoCode.GDWinObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDFrontWheelObjects1Objects, gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_9546Downhill_959532Bike_959532DemoCode_9546GDWinObjects1Objects, false, runtimeScene, false);
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Elapsed"), gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects1);
+{runtimeScene.getScene().getVariables().getFromIndex(11).setNumber(gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSeconds(runtimeScene, "elapsedTimer"));
+}{runtimeScene.getScene().getVariables().getFromIndex(11).setString(gdjs.evtTools.string.subStr(gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(12))), 0, 5));
+}{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects1.length ;i < len;++i) {
+    gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects1[i].setString(gdjs.evtTools.variable.getVariableString(runtimeScene.getScene().getVariables().getFromIndex(11)));
+}
+}{gdjs.evtTools.window.openURL("https://mihot7.github.io/bikeboost/win.html", runtimeScene);
 }}
 
 }
@@ -1542,137 +1600,8 @@ gdjs.Downhill_32Bike_32DemoCode.eventsList12 = function(runtimeScene) {
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("Jump"), gdjs.Downhill_32Bike_32DemoCode.GDJumpObjects3);
-gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3);
-gdjs.copyArray(runtimeScene.getObjects("floor"), gdjs.Downhill_32Bike_32DemoCode.GDfloorObjects3);
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.object.raycastObject(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDfloorObjects3ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDJumpObjects3Objects, (( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[0].getPointX("Center")), (( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[0].getPointY("Center")), 90, 5000, runtimeScene.getVariables().getFromIndex(6), runtimeScene.getVariables().getFromIndex(4), true);
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
-/* Reuse gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3 */
-{runtimeScene.getVariables().getFromIndex(5).setNumber((gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(4)) - ((( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[0].getPointY("")) - 600)));
-}{gdjs.evtTools.camera.setCameraZoom(runtimeScene, (300 / gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(5))), "", 0);
-}}
-
-}
-
-
-{
-
-
-
-}
-
-
-{
-
-
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.common.logicalNegation(false);
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
-gdjs.copyArray(runtimeScene.getObjects("Follow"), gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3);
-gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3);
-{runtimeScene.getVariables().getFromIndex(8).setNumber(gdjs.evtTools.common.lerp((( gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3[0].getPointX("")), (( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[0].getPointX("")), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(7))));
-}{runtimeScene.getVariables().getFromIndex(9).setNumber(gdjs.evtTools.common.lerp((( gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDFollowObjects3[0].getPointY("")), (( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects3[0].getPointY("")), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(7))));
-}
-{ //Subevents
-gdjs.Downhill_32Bike_32DemoCode.eventsList12(runtimeScene);} //End of subevents
-}
-
-}
-
-
-{
-
-
-
-}
-
-
-{
-
-
-{
-gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2);
-{gdjs.evtTools.camera.setCameraX(runtimeScene, ((( gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2[0].getPointX("")) + 900) / 100, "Background", 0);
-}}
-
-}
-
-
-};gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDFrontWheelObjects2Objects = Hashtable.newFrom({"FrontWheel": gdjs.Downhill_32Bike_32DemoCode.GDFrontWheelObjects2});
-gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDStartObjects2Objects = Hashtable.newFrom({"Start": gdjs.Downhill_32Bike_32DemoCode.GDStartObjects2});
-gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDFrontWheelObjects1Objects = Hashtable.newFrom({"FrontWheel": gdjs.Downhill_32Bike_32DemoCode.GDFrontWheelObjects1});
-gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDWinObjects1Objects = Hashtable.newFrom({"Win": gdjs.Downhill_32Bike_32DemoCode.GDWinObjects1});
-gdjs.Downhill_32Bike_32DemoCode.eventsList14 = function(runtimeScene) {
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("FrontWheel"), gdjs.Downhill_32Bike_32DemoCode.GDFrontWheelObjects2);
-gdjs.copyArray(runtimeScene.getObjects("Start"), gdjs.Downhill_32Bike_32DemoCode.GDStartObjects2);
-
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDFrontWheelObjects2Objects, gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDStartObjects2Objects, false, runtimeScene, false);
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "elapsedTimer");
-}}
-
-}
-
-
-{
-
-
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(11)) == 0;
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
-gdjs.copyArray(runtimeScene.getObjects("Elapsed"), gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects2);
-{runtimeScene.getVariables().getFromIndex(12).setNumber(gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSeconds(runtimeScene, "elapsedTimer"));
-}{runtimeScene.getVariables().getFromIndex(12).setString(gdjs.evtTools.string.subStr(gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(12))), 0, 5));
-}{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects2[i].setString(gdjs.evtTools.variable.getVariableString(runtimeScene.getVariables().getFromIndex(12)));
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("FrontWheel"), gdjs.Downhill_32Bike_32DemoCode.GDFrontWheelObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Win"), gdjs.Downhill_32Bike_32DemoCode.GDWinObjects1);
-
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDFrontWheelObjects1Objects, gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDWinObjects1Objects, false, runtimeScene, false);
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
-gdjs.copyArray(runtimeScene.getObjects("Elapsed"), gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects1);
-{runtimeScene.getVariables().getFromIndex(11).setNumber(gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSeconds(runtimeScene, "elapsedTimer"));
-}{runtimeScene.getVariables().getFromIndex(11).setString(gdjs.evtTools.string.subStr(gdjs.evtTools.common.toString(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(12))), 0, 5));
-}{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects1.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDElapsedObjects1[i].setString(gdjs.evtTools.variable.getVariableString(runtimeScene.getVariables().getFromIndex(11)));
-}
-}}
-
-}
-
-
-};gdjs.Downhill_32Bike_32DemoCode.eventsList15 = function(runtimeScene) {
-
-{
-
-
-
-}
-
-
-{
-
-
+let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("Crank"), gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2);
 gdjs.copyArray(runtimeScene.getObjects("FrontSuspensionBottom"), gdjs.Downhill_32Bike_32DemoCode.GDFrontSuspensionBottomObjects2);
@@ -1689,7 +1618,7 @@ gdjs.copyArray(runtimeScene.getObjects("RearSuspension"), gdjs.Downhill_32Bike_3
     gdjs.Downhill_32Bike_32DemoCode.GDRearSuspensionObjects2[i].setAngle((( gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2.length === 0 ) ? 0 :gdjs.Downhill_32Bike_32DemoCode.GDMainFrameObjects2[0].getAngle()));
 }
 }{for(var i = 0, len = gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2.length ;i < len;++i) {
-    gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2[i].getBehavior("Physics2").setRevoluteJointMotorSpeed(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().get("crank")), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(1)) / 4);
+    gdjs.Downhill_32Bike_32DemoCode.GDCrankObjects2[i].getBehavior("Physics2").setRevoluteJointMotorSpeed(gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("crank")), gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(1)) / 4);
 }
 }}
 
@@ -1713,10 +1642,10 @@ gdjs.Downhill_32Bike_32DemoCode.eventsList4(runtimeScene);
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getVariables().getFromIndex(13)) > 1000;
-}if (gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val) {
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(13)) > 100000;
+if (isConditionTrue_0) {
 {gdjs.deviceVibration.startVibration(500);
 }
 { //Subevents
@@ -1729,38 +1658,7 @@ gdjs.Downhill_32Bike_32DemoCode.eventsList5(runtimeScene);} //End of subevents
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.eventsList6(runtimeScene);
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("Head"), gdjs.Downhill_32Bike_32DemoCode.GDHeadObjects2);
-gdjs.copyArray(runtimeScene.getObjects("Jump"), gdjs.Downhill_32Bike_32DemoCode.GDJumpObjects2);
-gdjs.copyArray(runtimeScene.getObjects("LArm"), gdjs.Downhill_32Bike_32DemoCode.GDLArmObjects2);
-gdjs.copyArray(runtimeScene.getObjects("LUpperArm"), gdjs.Downhill_32Bike_32DemoCode.GDLUpperArmObjects2);
-gdjs.copyArray(runtimeScene.getObjects("RArm"), gdjs.Downhill_32Bike_32DemoCode.GDRArmObjects2);
-gdjs.copyArray(runtimeScene.getObjects("RUpperArm"), gdjs.Downhill_32Bike_32DemoCode.GDRUpperArmObjects2);
-gdjs.copyArray(runtimeScene.getObjects("Torso"), gdjs.Downhill_32Bike_32DemoCode.GDTorsoObjects2);
-gdjs.copyArray(runtimeScene.getObjects("floor"), gdjs.Downhill_32Bike_32DemoCode.GDfloorObjects2);
-
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = false;
-gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_0.val = false;
-{
-gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val = gdjs.physics2.objectsCollide(gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDHeadObjects2ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDTorsoObjects2ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDRArmObjects2ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDLArmObjects2ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDRUpperArmObjects2ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDLUpperArmObjects2Objects, "Physics2", gdjs.Downhill_32Bike_32DemoCode.mapOfGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDfloorObjects2ObjectsGDgdjs_46Downhill_9532Bike_9532DemoCode_46GDJumpObjects2Objects, false);
-}if ( gdjs.Downhill_32Bike_32DemoCode.condition0IsTrue_0.val ) {
-{
-{gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1 = gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_0;
-gdjs.Downhill_32Bike_32DemoCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(9196140);
-}
-}}
-if (gdjs.Downhill_32Bike_32DemoCode.condition1IsTrue_0.val) {
-{gdjs.deviceVibration.startVibration(500);
-}
-{ //Subevents
-gdjs.Downhill_32Bike_32DemoCode.eventsList7(runtimeScene);} //End of subevents
-}
-
+gdjs.Downhill_32Bike_32DemoCode.eventsList9(runtimeScene);
 }
 
 
@@ -1774,18 +1672,11 @@ gdjs.Downhill_32Bike_32DemoCode.eventsList11(runtimeScene);
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.eventsList13(runtimeScene);
+gdjs.Downhill_32Bike_32DemoCode.eventsList12(runtimeScene);
 }
 
 
-{
-
-
-gdjs.Downhill_32Bike_32DemoCode.eventsList14(runtimeScene);
-}
-
-
-};gdjs.Downhill_32Bike_32DemoCode.eventsList16 = function(runtimeScene) {
+};gdjs.Downhill_32Bike_32DemoCode.eventsList14 = function(runtimeScene) {
 
 {
 
@@ -1797,7 +1688,7 @@ gdjs.Downhill_32Bike_32DemoCode.eventsList1(runtimeScene);
 {
 
 
-gdjs.Downhill_32Bike_32DemoCode.eventsList15(runtimeScene);
+gdjs.Downhill_32Bike_32DemoCode.eventsList13(runtimeScene);
 }
 
 
@@ -2026,8 +1917,13 @@ gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects2.length = 0;
 gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects3.length = 0;
 gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects4.length = 0;
 gdjs.Downhill_32Bike_32DemoCode.GDForceIndicatorObjects5.length = 0;
+gdjs.Downhill_32Bike_32DemoCode.GDNewTextObjects1.length = 0;
+gdjs.Downhill_32Bike_32DemoCode.GDNewTextObjects2.length = 0;
+gdjs.Downhill_32Bike_32DemoCode.GDNewTextObjects3.length = 0;
+gdjs.Downhill_32Bike_32DemoCode.GDNewTextObjects4.length = 0;
+gdjs.Downhill_32Bike_32DemoCode.GDNewTextObjects5.length = 0;
 
-gdjs.Downhill_32Bike_32DemoCode.eventsList16(runtimeScene);
+gdjs.Downhill_32Bike_32DemoCode.eventsList14(runtimeScene);
 
 return;
 
