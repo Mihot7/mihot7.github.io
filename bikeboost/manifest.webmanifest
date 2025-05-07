@@ -1,0 +1,12 @@
+{
+  "name": "BikeRider BOOST",
+  "short_name": "BikeRider BOOST",
+  "id": "com.Mihot7.bikeBOOST",
+  "description": "",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
