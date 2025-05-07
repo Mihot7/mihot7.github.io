@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mihot7's website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: #e0e0e0;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    nav button:hover,
+    nav button.active {
+      background-color: #060e86;
+    }
+
+    section {
+      display: none;
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h1, h2 {
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <button onclick="showTab('home')" class="active">Main page</button>
+      <button onclick="showTab('apps')">Stuff and apps</button>
+      <button onclick="showTab('links')">Links</button>
+      <button onclick="showTab('iso')">Windows ISO</button>
+      <button onclick="showTab('about')">About me</button>
+    </nav>
+  </header>
+
+  <section id="home" class="active">
+    <h1>Main page</h1>
+    <p>Hello there! Restoring all functionality will take some time, I'll be right back.</p>
+    <p>As of right now, I can't code this website, cuz I have exams :(</p>
+    <p>Old (Still functional) version is here:<a href="https://mihot7.github.io/legacy-website/index.html"> here</a></p>
+  </section>
+
+  <section id="apps">
+    <h2>Stuff and apps</h2>
+    <p>Work in progress</p>
+  </section>
+
+  <section id="links">
+    <h2>Links</h2>
+    <p>Work in progresss</p>
+  </section>
+
+  <section id="iso">
+    <h2>Windows ISO</h2>
+    <p>Work in progress</p>
+  </section>
+
+  <section id="about">
+  <h2>About me</h2>
+  <p>Hello there if you 're reading this thank you!</p>
+  <p>This website won't be created without NotAdidel!</p>
+  <p>Thanks NotAdidel!</p>
+  <p>Thank you for wisiting here!</p>
+  <p>if you want to be in Memorial page contact me: <a href="mailto:zixmichal@gmail.com">zixmichal@gmail.com</a> (work in progress!)</p>
+  </section>
+
+  <footer>
+    <p>&copy; Copyright Mihot7 2025</p>
+  </footer>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll("section").forEach(sec => {
+        sec.classList.remove("active");
+      });
+      document.querySelectorAll("nav button").forEach(btn => {
+        btn.classList.remove("active");
+      });
+      document.getElementById(id).classList.add("active");
+      event.target.classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
