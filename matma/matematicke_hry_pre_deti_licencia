@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="sk">
+    <head>
+        <meta name="description" content="Matematika 2 + 2 pre deti je program zameraný na pomoc deťom v oblasti základných matematických zručností (násobenie, delenie, sčitovanie, odčitovanie, číslice). Deti majú rady 2+2">
+        <meta name="keywords" content="tabuľka násobenia, výučba násobenia, matematika pre deti">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+        <meta name="robots" content="index, follow">
+        <meta name="robots" content="archive">
+
+        <link rel="stylesheet" href="https://funnymathforkids.com/_sites/2p2/v1/images/style_site.css" type="text/css">
+        <link rel="stylesheet" href="https://funnymathforkids.com/_sites/2p2/v1/_langs/sk/style_site.css" type="text/css">
+        <link rel="shortcut icon" href="https://funnymathforkids.com/_sites/2p2/v1/images/favicon.ico">
+        <title>Matematické hry pre deti (základné počtové operácie) - bezplatný výučbový program - Licencia</title>
+
+        <link rel="stylesheet" href="https://funnymathforkids.com/_sites/2p2/v1/js/slimbox/css/slimbox2.css" type="text/css" media="screen">
+    </head>
+
+    <body>
+        <!-- naglowek -->
+        <div id="header">
+            <div id="header-content">
+
+                <h1 id="logo">
+                    <a href="https://funnymathforkids.com"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/logo.gif" alt="matematika pre deti" width="103" height="81"><br>Mtematické hry pre deti</a>
+                </h1>
+
+                <!-- Menu -->
+                <ul>
+                    <li><a href="https://funnymathforkids.com"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/nav1.gif" alt="O programe"><br>O programe</a></li>
+                    <li><a href="matematicke_hry_pre_deti_ocenenia"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/nav2.gif" alt="Ocenenia"><br>Ocenenia</a></li>
+                    <li><a href="matematicke_hry_pre_deti_na_stiahnutie"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/nav3.gif" alt="Na stiahnutie"><br>Na stiahnutie</a></li>                    
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- zawartosc -->
+        <div id="content-wrap">
+            <div id="content">
+
+                <div id="sidebar" >
+                    <div class="sidebox">
+                        <h1>Matematika pre deti</h1>
+                        <ul class="sidemenu">
+                            <li><a href="matematicke_hry_pre_deti_hlas" class="top">Hlas</a></li>
+                            <li><a href="matematicke_hry_pre_deti_kontakt">Kontakt</a></li>
+                            <li><a href="matematicke_hry_pre_deti_licencia">Licencia</a></li>
+                            <li><a href="matematicke_hry_pre_deti_odkazy">Odkazy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebox" id="recommend">
+                        <h1>Odporúčame</h1>
+                        <p>
+                            <!-- ↓↓↓↓ links_banners ↓↓↓↓ -->
+                        </p>
+                    </div>
+
+                    <div class="sidebox" id="donate">
+                        <h1>Darovanie</h1>
+                        <p class="tags">
+                            Ak sa vám páči program 2+2 matematika pre deti, môžete nám prostredníctvom služby PayPal poslať dobrovoľný príspevok na udržiavanie internetových stránok.
+                        </p>
+                        <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-butcc-donate.gif" name="submit" alt="PayPal">
+                            <img alt="" border="0" src="https://www.paypal.com/pl_PL/i/scr/pixel.gif" width="1" height="1">
+                            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                        </form>
+                        <p>
+                            Nemusíte mať konto PayPal. Prijímame aj platby kreditnou kartou.
+                        </p>
+                    </div>
+
+                    <div class="sidebox" id="tags">
+                        <h1>Kľúčové slová</h1>
+                        <p class="tags">
+                            matematika pre deti, tabuľka násobenia, program pre deti, edukačné hry pre deti, výučba počítania
+                        </p>
+                    </div>
+                </div>
+
+                <div id="main" data-id="license">
+
+                    <h1>Licencia</h1>
+                    <ol>
+                        <li data-no="1">2+2 matematika pre deti je program typu freeware - je povolené bezplatné používanie a&nbsp;šírenie tohto programu pomocou akýchkoľvek médií.</li>
+                        <li data-no="3">Program 2+2 matematika pre deti môže byť distribuovaný a&nbsp;reprodukovaný iba vo forme, v ktorej bol sprístupnený autorom. Distribúcia alebo reprodukcia programu v neúplnej forme alebo jeho doplnenie ďalšími komponentmi sú zakázané.</li>
+                        <li data-no="3">Je zakázané podmieňovať prístup používateľa k programu 2+2 matematika pre deti zaplatením dodatočných poplatkov poskytovateľovi programu.</li>
+                        <li data-no="4">2+2 matematika pre deti sa poskytuje vo forme „tak, ako je“. Autor a&nbsp;distribútori programu neposkytujú žiadnu záruku ani vyjadrenie, že program bude správne fungovať. Program používate na vlastné riziko.</li>
+                        <li data-no="5">Inštalácia a&nbsp;používanie programu 2+2 matematika pre deti znamená prijatie podmienok licencie. Ak nesúhlasíte s podmienkami tejto licencie, musíte z&nbsp;úložných zariadení odstrániť súbory programu a&nbsp;prestať produkt používať.</li>
+                    </ol>
+                </div>
+
+
+                <!-- zawartosc -->
+            </div>
+        </div>
+
+        <!-- stopka -->
+        <div id="footer-wrap">
+            <div id="footer-content">
+
+                <div class="col float-left">
+                    <div id="links_for_children">
+                        <h2>Stránky pre deti</h2>
+                        <ul>
+                            <!-- ↓↓↓↓ links_site_for_children ↓↓↓↓ -->
+                        </ul>
+                    </div>
+                    <p>
+                        &copy; 2001-2025 funnymathforkids.com <br>
+                        <!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://matematykadladzieci.pl?lang=pl" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_pl.gif" title=""></a>
+<!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://funnymathforkids.com?lang=en" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_en.gif" title=""></a>
+<!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://funnymathforkids.com?lang=tr" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_tr.gif" title=""></a>
+<!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://funnymathforkids.com?lang=sk" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_sk.gif" title=""></a>
+<!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://mathematikfurkinder.de?lang=de" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_de.gif" title=""></a>
+<!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://matematicaperbambini.it?lang=it" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_it.gif" title=""></a>
+<!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://mathematiquespourlesenfants.fr?lang=fr" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_fr.gif" title=""></a>
+                    </p>
+                </div>
+
+                <div class="col float-left">
+                    <div id="links_for_parents">
+                        <h2>Stránky pre rodičov</h2>
+                        <ul>
+                            <!-- ↓↓↓↓ links_site_for_parents ↓↓↓↓ -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col2 float-right">
+                    <div id="links_freinds">
+                        <h2>Spriaznené stránky</h2>
+                        <ul>
+                            <!-- ↓↓↓↓ links_friends ↓↓↓↓ -->
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- stopka -->
+
+    </body>
+</html>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="description" content="2+2 math for kids is a&nbsp;program aimed to help children's in the area of basic math skills (multiplication, counting). Kids loves 2+2">
+        <meta name="keywords" content="multiplication, learning multiplication, math for kids">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+        <meta name="robots" content="index, follow">
+        <meta name="robots" content="archive">
+
+        <link rel="stylesheet" href="https://funnymathforkids.com/__mdsEngine/css/style.css" type="text/css">
+        <link rel="stylesheet" href="https://funnymathforkids.com/_sites/2p2/v1/images/style_site.css" type="text/css">
+        <link rel="stylesheet" href="https://funnymathforkids.com/_sites/2p2/v1/_langs/en/style_site.css" type="text/css">
+        <link rel="shortcut icon" href="https://funnymathforkids.com/_sites/2p2/v1/images/favicon.ico">
+        <title>Math for kids (multiplication, counting) - freeware for kids - Contact</title>
+
+        <link rel="stylesheet" href="https://funnymathforkids.com/_sites/2p2/v1/js/slimbox/css/slimbox2.css" type="text/css" media="screen">
+    </head>
+
+    <body>
+
+        <div id="header">
+            <div id="header-content">
+
+                <h1 id="logo">
+                    <a href="https://funnymathforkids.com"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/logo.gif" alt="math for kids" width="103" height="81"><br>Math games for kids</a>
+                </h1>
+
+                <!-- Menu -->
+                <ul>
+                    <li><a href="https://funnymathforkids.com"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/nav1.gif" alt="About the program"><br>About the program</a></li>
+                    <li><a href="math_for_kids_awards"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/nav2.gif" alt="Awards"><br>Awards</a></li>
+                    <li><a href="math_for_kids_download"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/nav3.gif" alt="Download"><br>Download</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- zawartosc -->
+        <div id="content-wrap">
+            <div id="content">
+
+                <div id="sidebar" >
+                    <div class="sidebox">
+                        <h1>Math for kids</h1>
+                        <ul class="sidemenu">
+                            <li><a href="math_for_kids_voices" class="top">Vocals</a></li>
+                            <li><a href="math_for_kids_contact">Contact</a></li>
+                            <li><a href="math_for_kids_license">License</a></li>
+                            <li><a href="math_for_kids_links">Links</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebox" id="recommend">
+                        <h1>Recommended</h1>
+                        <p>
+                            <!-- ↓↓↓↓ links_banners ↓↓↓↓ -->
+                        </p>
+                    </div>
+
+                    <div class="sidebox" id="donate">
+                        <h1>Donate</h1>
+                        <p class="tags">
+                            If you like 2+2 donate to funnymathforkids.com. You can contribute via PayPal by clicking on the PayPal icon.
+                        </p>
+                        <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-butcc-donate.gif" name="submit" alt="PayPal">
+                            <img alt="" border="0" src="https://www.paypal.com/pl_PL/i/scr/pixel.gif" width="1" height="1">
+                            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                        </form>
+                        <p>
+                            You don't need to set up a&nbsp;PayPal account to donate via PayPal. Visa, MasterCard, American Express and Discover are accepted.
+                        </p>
+                    </div>
+
+                    <div class="sidebox" id="tags">
+                        <h1>Tags</h1>
+                        <p class="tags">
+                            math for kids, multiplication, software for children, educational games for children, count learning
+                        </p>
+                    </div>
+                </div>
+
+                <div id="main">
+
+
+                    <h1>Write to us</h1>
+                    <div id="mds_contact">
+                        <form data-mdse-form="contact_us" action="#">
+                            <div class="form_inputs">
+                                <input data-mdse-input="pnnn" placeholder="Your name" value="" type="text" size="50" required>
+                                <input data-mdse-input="peee" placeholder="Your email" value="" type="email" size="50" required>
+                                <input data-mdse-input="pttt" placeholder="Subject" value="" type="text" size="50" required>
+                                <textarea data-mdse-input="dwww" placeholder="Message" cols="22" rows="26" required></textarea>
+                            </div>
+                            <div class="form_results">
+                                <div style="display:table-cell;vertical-align:middle;">
+                                    <div><button name="ds" type="submit" class="button">Send</button></div>
+                                    <div class="form_loader"></div>
+                                    <div data-mdse-element="result_message"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- zawartosc -->
+                </div>
+            </div>
+        </div>
+
+        <!-- stopka -->
+        <div id="footer-wrap">
+            <div id="footer-content">
+
+                <div class="col float-left">
+                    <div id="links_for_children">
+                        <h2>Websites for children</h2>
+                        <ul>
+                            <!-- ↓↓↓↓ links_site_for_children ↓↓↓↓ -->
+                        </ul>
+                    </div>
+                    <p>
+                        &copy; 2001-2025 funnymathforkids.com <br>
+                        <!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://matematykadladzieci.pl?lang=pl" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_pl.gif" title=""></a>
+<!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://funnymathforkids.com?lang=en" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_en.gif" title=""></a>
+<!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://funnymathforkids.com?lang=tr" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_tr.gif" title=""></a>
+<!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://funnymathforkids.com?lang=sk" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_sk.gif" title=""></a>
+<!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://mathematikfurkinder.de?lang=de" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_de.gif" title=""></a>
+<!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://matematicaperbambini.it?lang=it" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_it.gif" title=""></a>
+<!-- ↓↓↓↓ select_lang ↓↓↓↓ -->
+<a href="https://mathematiquespourlesenfants.fr?lang=fr" rel="nofollow"><img src="https://funnymathforkids.com/_sites/2p2/v1/images/flags/small_flag_fr.gif" title=""></a>
+                    </p>
+                </div>
+
+                <div class="col float-left">
+                    <div id="links_for_parents">
+                        <h2>Websites for parents</h2>
+                        <ul>
+                            <!-- ↓↓↓↓ links_site_for_parents ↓↓↓↓ -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col2 float-right">
+                    <div id="links_freinds">
+                        <h2>Friends websites</h2>
+                        <ul>
+                            <!-- ↓↓↓↓ links_friends ↓↓↓↓ -->
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- stopka -->
+
+        <!-- ev: 0.4.1 -->
+        <script type="text/javascript" src="https://funnymathforkids.com/__mdsEngine/js/form.min.js"></script>
+
+    </body>
+</html>
