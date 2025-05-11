@@ -1,0 +1,40 @@
+/* 
+    v. 1.0
+*/
+
+div.form_results {
+    padding-top: 10px;
+    display: table;
+}
+
+div.form_results div {
+    float: left;
+}
+
+div.form_results button {
+    margin: 0;
+}
+
+
+div.form_loader {
+    background-color: grey;
+    height: 26px;
+    width: 40px;
+    margin-left: 10px;
+    background: url('../images/preloader.gif') no-repeat center center;
+}
+
+div#form_message {
+    color: green;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+div#form_message[data-error="1"] {
+    color: red;
+}
+
+
+#mds_contact .form_loader {
+    display: none;
+}
