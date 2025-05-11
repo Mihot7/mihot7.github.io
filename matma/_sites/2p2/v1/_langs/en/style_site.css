@@ -1,0 +1,9 @@
+
+#links_for_children,
+#links_for_parents,
+#links_freinds,
+#recommend,
+#main[data-id="license"] li[data-no="5"]
+{
+    display: none;
+}
