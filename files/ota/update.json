@@ -1,0 +1,20 @@
+{
+  "response": [
+    {
+        "maintainer": "Mihot7",
+        "oem": "Xiaomi",
+        "device": "Redmi Note 12 4G",
+        "filename": "crDroidAndroid-15.0-20250517-topaz-v11.5.zip",
+        "download": "https://mihot7.github.io/files/ota/crDroidAndroid-15.0-20250517-topaz-v11.5.zip",
+        "timestamp": 1747479099,
+        "md5": "6aa65e48593aaa00c8b100e6a5ff8894",
+        "sha256": "bc6c4dd06257b554c81978168a9a79349c7d94dc9d720c943e459ea4caa44a39",
+        "size": 1526814704,
+        "version": "11.5",
+        "buildtype": "Monthly",
+        "forum": "https://xdaforums.com/t/rom-15-unofficial-crdroid-11-5-for-topaz.4737009/",
+        "gapps": "https://nikgapps.com/",
+        "dt": "https://github.com/BaranAspect-Development/android_device_xiaomi_topaz"
+    }
+  ]
+}
