@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Generator Cytatów</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #121212;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 40px;
+    }
+
+    #quote-box {
+      background: #1e1e1e;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 50px auto;
+      max-width: 600px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+    }
+
+    #quote {
+      font-size: 1.6em;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    #author {
+      font-size: 1.1em;
+      color: #bbbbbb;
+      margin-bottom: 25px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      background-color: #00bcd4;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00bcd4;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #0097a7;
+      transform: scale(1.05);
+    }
+
+    .back {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #4caf50;
+      box-shadow: 0 0 10px #4caf50;
+    }
+
+    .back:hover {
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html"><button class="back">⟵ Powrót</button></a>
+
+  <div id="quote-box">
+    <div id="quote">Kliknij przycisk, aby wylosować cytat.</div>
+    <div id="author"></div>
+    <button onclick="generateQuote()">🎲 Wylosuj cytat</button>
+  </div>
+
+  <script>
+    const quotes = [
+      { text: "It's muffin time, cuz I wanna die die die!", author: "Mr. muffin (asdfmovie)" },
+      { text: "Cyberword jest zbudowany inaczej.", author: "Gameboy" },
+      { text: "Dzięki Mihot... Rozwaliłeś mi VM'ke!", author: "EksonN 難" },
+      { text: "Wystąpił katastrofalny błąd.", author: "Microsoft Windows" },
+      { text: "I'm blue[...]", author: "Eiffel 65" },
+      { text: "Cześć! MTOS sie wysrał :/", author: "MTOS 5.2 - Mihot7" },
+      { text: "I'm faaar from love!", author: "Missquerada Far From Love" },
+      { text: "May God forgive you. But I won't.", author: "Sarvente" },
+      { text: "Think different.", author: "Apple" },
+      { text: "Czm ty masz papier toaletowy na biurku? Ty srasz przy komputerze?", author: "szaq_" },
+      { text: "Powód bana: DEBIL", author: "Mihot7" },
+      { text: "O, to ja!", author: "EksonN 難" },
+      { text: "KOT KOT RUDY KOT!", author: "mily" },
+      { text: "meow", author: "karmelek" },
+      { text: "Pozdrawiamy!!!!!!!!!!!!!!!!!!!", author: "BOK ynet" },
+      { text: "Ozerox chyba mnie lubi.", author: "szaq_" },
+      { text: "Ja wiem, jaki jest plan dnia i ja pierdolę ten twój plan dnia, bo ja znam plan dnia na pamięć, rozumiesz? Ty masz tutaj być i masz na mnie czekać, bo na mnie się czeka i ze mną się jest, kurwa, i mnie się pilnuje cały czas, rozumiesz? Ze mną się jest i ze mną się, kurwa, jest cały czas, rozumiesz?! Dobra, sam tego chciałeś, wracam do domu SAAAAM! SAAAAAAAAAAAAAAAAAAM!", author: "Dominik Santorski" },
+      { text: "jestes taka ulana, ze dla ciebie tlusty czwartek to tlusta dekada", author: "Boyfriend (Relme MOD)" },
+      { text: "Beep!", author: "Boyfriend" },
+      { text: "nie zalam glosnikow....", author: "Boyfriend (Relme MOD)" },
+      { text: "jak to wali, nie da sie w tym pierdolniku wytrzymac", author: "Boyfriend (Relme MOD)" },
+      { text: "TATA KUPA!!!", author: "ozerox" },
+      { text: "kot dostał pierdolca bo biega przez cały dom", author: "mily" },
+      { text: "no chyba cie cos boli za przeproszeniem", author: "szaq_" },
+      { text: "Cicho Zosia", author: "EksonN 難" },
+      { text: "jak ktoś się włamie, to ktoś się włamie i trudno ", author: "mily" },
+      { text: "Jeśli sprawiło to panu przyjemność to super.", author: "BOK ynet" },
+      { text: "NOSZ CO WY MACIE Z TĄ SALĄ SAMOBÓJCÓW!", author: "EksonN 難" },
+      { text: "Big Gates", author: "Mihot7" },
+      { text: "Czasem się zastanawiam, czy napewno nie jestem pojebany.", author: "mily" },
+      { text: "O, miłemu się ADHD odpaliło!", author: "ozerox" },
+      { text: "Odpalam turbosranie!!!", author: "Mihot7" },
+      { text: "REALME NOTE 60 UTUTUTUTUTUTUTUTU", author: "Jakiś pracownik realme" },
+      { text: "Bo mogę, chcę i lubię.", author: "Toffix" },
+      { text: "KURWAAAA!!! To zasrane gówno nie chce działać!", author: "mily" },
+      { text: "Podłącz ten kabel, skurwysynu!", author: "Dominik Santorski (alternatywnie mily do pracowników podłączających światłowód)" },
+      { text: "No i znowu. Jak ta pizda wlazła na ten głośnik? No co za kurna dzbanerska gra!", author: "EksonN 難" },
+      { text: "Nie denerwuj się kotek.", author: "Jacek B." },
+      { text: "😠", author: "szaq_" },
+      { text: "Lubicie neostrade?", author: "mily" },
+      { text: "Live box TP", author: "Pani Neostrada" },
+      { text: "Adapter łifi", author: "Pani Neostrada" },
+      { text: "Lubisz kotuś Garfielda?", author: "Jacek B." },
+      { text: "IT'S ME IT'S ME IT'S ME IT'S REALME!", author: "Realme" },
+      { text: "Uwaga: W dalszej części znajdują się słowa powszechnie uznane za wulgarne! Jeżeli nie jesteś pełnoletni lub Cię to razi – zajmij się czymś typowym dla nastolatków, np. oglądaniem stron z gołymi babami!", author: "Nonsensopedia" },
+      { text: "Nie graj w Second Life, jeżeli chcesz mieć działający komputer.", author: "EksonN 難" },
+      { text: "Ja nie rozumiem samobójców, [...] Ja po prostu tego nie rozumiem, ja nie chcę tego rozumieć.", author: "Dominik Santorski" },
+      { text: "Tak, to ja. Ten idiota z YouTube'a", author: "Mihot7" },
+      { text: "Jeśli widzisz ten cytat, to znaczy, że ten kod nie ma downa, ale ja mam.", author: "Mihot7" },
+    ];
+
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = `"${quotes[randomIndex].text}"`;
+      document.getElementById("author").innerText = `— ${quotes[randomIndex].author}`;
+    }
+  </script>
+
+</body>
+</html>
