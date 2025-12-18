@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Geograficzny - Wody i Wyspy</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden; }
+
+        /* Mapa na pełny ekran */
+        #map { height: 100vh; width: 100vw; background: #aad3df; }
+
+        /* Panel sterowania (UI) */
+        #ui-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            text-align: center;
+            min-width: 300px;
+            border: 2px solid #2c3e50;
+        }
+
+        #question-text {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        #score-text {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        #feedback {
+            margin-top: 10px;
+            font-weight: bold;
+            height: 20px;
+        }
+
+        .correct { color: green; }
+        .wrong { color: red; }
+
+        /* Styl pinezek (kropek) */
+        .leaflet-interactive {
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        /* Ekran startowy */
+        #start-screen {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover { background: #2ecc71; }
+
+    </style>
+</head>
+<body>
+
+    <div id="start-screen">
+        <h1>Quiz Geograficzny</h1>
+        <p>Liczba miejsc do znalezienia: 66</p>
+        <button onclick="startGame()">Rozpocznij grę</button>
+    </div>
+
+    <div id="ui-container" style="display:none;">
+        <div id="score-text">Wynik: 0 | Pozostało: 66</div>
+        <div id="question-text">Ładowanie...</div>
+        <div id="feedback"></div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // --- 1. DANE GEOGRAFICZNE (Współrzędne przybliżone środków) ---
+        const locations = [
+            // MORZA
+            { name: "Morze Sargasowe", type: "Morze", lat: 28.0, lng: -66.0 },
+            { name: "Morze Baffina", type: "Morze", lat: 73.0, lng: -67.0 },
+            { name: "Morze Śródziemnomorskie", type: "Morze", lat: 35.0, lng: 18.0 },
+            { name: "Morze Karskie", type: "Morze", lat: 75.0, lng: 75.0 },
+            { name: "Morze Barentsa", type: "Morze", lat: 75.0, lng: 40.0 },
+            { name: "Morze Norweskie", type: "Morze", lat: 66.0, lng: 3.0 },
+            { name: "Morze Północne", type: "Morze", lat: 56.0, lng: 3.0 },
+            { name: "Morze Bałtyckie", type: "Morze", lat: 58.0, lng: 20.0 },
+            { name: "Morze Wschodniosyberyjskie", type: "Morze", lat: 72.0, lng: 164.0 },
+            { name: "Morze Arabskie", type: "Morze", lat: 15.0, lng: 65.0 },
+            { name: "Morze Tasmana", type: "Morze", lat: -37.0, lng: 160.0 },
+            { name: "Morze Koralowe", type: "Morze", lat: -18.0, lng: 155.0 },
+            { name: "Morze Jawajskie", type: "Morze", lat: -5.0, lng: 110.0 },
+            { name: "Morze Andamańskie", type: "Morze", lat: 10.0, lng: 96.0 },
+            { name: "Morze Czerwone", type: "Morze", lat: 20.0, lng: 38.0 },
+            { name: "Morze Żółte", type: "Morze", lat: 35.0, lng: 123.0 },
+            { name: "Morze Japońskie", type: "Morze", lat: 40.0, lng: 135.0 },
+            { name: "Morze Ochockie", type: "Morze", lat: 55.0, lng: 150.0 },
+            { name: "Morze Filipińskie", type: "Morze", lat: 20.0, lng: 130.0 },
+            { name: "Morze Południowochińskie", type: "Morze", lat: 12.0, lng: 113.0 },
+            { name: "Morze Fidżi", type: "Morze", lat: -20.0, lng: 178.0 }, // Przybliżenie (basen pd-zach Pacyfiku)
+            { name: "Morze Beringa", type: "Morze", lat: 58.0, lng: 178.0 },
+            { name: "Morze Czarne", type: "Morze", lat: 43.0, lng: 34.0 },
+            { name: "Morze Celebes", type: "Morze", lat: 3.0, lng: 122.0 },
+            { name: "Morze Timor", type: "Morze", lat: -11.0, lng: 126.0 },
+            { name: "Morze Beauforta", type: "Morze", lat: 72.0, lng: -137.0 },
+            { name: "Morze Łaptiewów", type: "Morze", lat: 76.0, lng: 125.0 },
+            { name: "Morze Karaibskie", type: "Morze", lat: 15.0, lng: -75.0 },
+            { name: "Morze Grenlandzkie", type: "Morze", lat: 76.0, lng: -5.0 },
+            { name: "Morze Czukockie", type: "Morze", lat: 69.0, lng: -171.0 },
+
+            // ZATOKI
+            { name: "Zatoka Bengalska", type: "Zatoka", lat: 15.0, lng: 90.0 },
+            { name: "Wielka Zatoka Australijska", type: "Zatoka", lat: -33.0, lng: 130.0 },
+            { name: "Zatoka Gwinejska", type: "Zatoka", lat: 2.0, lng: 5.0 },
+            { name: "Zatoka Adeńska", type: "Zatoka", lat: 12.0, lng: 48.0 },
+            { name: "Zatoka Perska", type: "Zatoka", lat: 27.0, lng: 51.0 },
+            { name: "Zatoka Biskajska", type: "Zatoka", lat: 45.0, lng: -4.0 },
+            { name: "Zatoka Hudsona", type: "Zatoka", lat: 60.0, lng: -85.0 },
+            { name: "Zatoka Meksykańska", type: "Zatoka", lat: 25.0, lng: -90.0 },
+
+            // KANAŁY
+            { name: "Kanał Mozambicki", type: "Kanał", lat: -18.0, lng: 41.0 },
+            { name: "Kanał Panamski", type: "Kanał", lat: 9.1, lng: -79.7 },
+            { name: "Kanał Sueski", type: "Kanał", lat: 30.5, lng: 32.3 },
+
+            // CIEŚNINY
+            { name: "Cieśnina Magellana", type: "Cieśnina", lat: -53.5, lng: -70.5 },
+            { name: "Cieśnina Gibraltarska", type: "Cieśnina", lat: 35.9, lng: -5.5 },
+            { name: "Cieśnina Duńska", type: "Cieśnina", lat: 66.0, lng: -27.0 },
+            { name: "Cieśnina Beringa", type: "Cieśnina", lat: 65.8, lng: -168.8 },
+            { name: "Cieśnina Drake’a", type: "Cieśnina", lat: -58.0, lng: -60.0 },
+
+            // WYSPY
+            { name: "Islandia", type: "Wyspa", lat: 65.0, lng: -19.0 },
+            { name: "Wielka Brytania", type: "Wyspa", lat: 54.0, lng: -2.0 },
+            { name: "Sumatra", type: "Wyspa", lat: -0.5, lng: 101.5 },
+            { name: "Borneo", type: "Wyspa", lat: 1.0, lng: 114.0 },
+            { name: "Jawa", type: "Wyspa", lat: -7.5, lng: 110.0 },
+            { name: "Honsiu", type: "Wyspa", lat: 36.0, lng: 138.0 },
+            { name: "Filipiny", type: "Wyspa", lat: 12.0, lng: 122.0 },
+            { name: "Cejlon (Sri Lanka)", type: "Wyspa", lat: 7.8, lng: 80.7 },
+            { name: "Madagaskar", type: "Wyspa", lat: -19.0, lng: 47.0 },
+            { name: "Grenlandia", type: "Wyspa", lat: 72.0, lng: -40.0 },
+            { name: "Kuba", type: "Wyspa", lat: 21.5, lng: -79.0 },
+            { name: "Ziemia Baffina", type: "Wyspa", lat: 69.0, lng: -72.0 },
+            { name: "Falklandy", type: "Wyspa", lat: -51.7, lng: -59.0 },
+            { name: "Galapagos", type: "Wyspa", lat: -0.5, lng: -90.5 },
+            { name: "Australia", type: "Wyspa/Kontynent", lat: -25.0, lng: 133.0 },
+            { name: "Nowa Zelandia", type: "Wyspa", lat: -41.0, lng: 174.0 },
+            { name: "Nowa Gwinea", type: "Wyspa", lat: -5.0, lng: 140.0 },
+            { name: "Celebes (Sulawesi)", type: "Wyspa", lat: -2.0, lng: 120.5 },
+            { name: "Tasmania", type: "Wyspa", lat: -42.0, lng: 146.5 },
+            { name: "Svalbard", type: "Wyspa", lat: 78.0, lng: 16.0 }
+        ];
+
+        // --- 2. ZMIENNE GRY ---
+        let map;
+        let markers = [];
+        let remainingQuestions = [];
+        let currentTarget = null;
+        let score = 0;
+        let attempts = 0; // Liczba prób dla danego pytania
+        let gameActive = false;
+
+        // --- 3. INICJALIZACJA MAPY ---
+        function initMap() {
+            // Ustawienie widoku na świat
+            map = L.map('map', {
+                center: [20, 10],
+                zoom: 2,
+                minZoom: 2,
+                maxBounds: [[-90, -180], [90, 180]]
+            });
+
+            // Warstwa mapy (jasna, bez etykiet, żeby nie podpowiadać za bardzo)
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+                subdomains: 'abcd',
+                maxZoom: 19
+            }).addTo(map);
+
+            // Dodawanie markerów
+            locations.forEach(loc => {
+                const marker = L.circleMarker([loc.lat, loc.lng], {
+                    color: '#3388ff',
+                    fillColor: '#3388ff',
+                    fillOpacity: 0.7,
+                    radius: 8,
+                    weight: 2
+                }).addTo(map);
+
+                marker.elementName = loc.name; // Przechowujemy nazwę w obiekcie
+
+                // Obsługa kliknięcia
+                marker.on('click', function(e) {
+                    if (!gameActive) return;
+                    checkAnswer(this, loc);
+                });
+
+                markers.push(marker);
+            });
+        }
+
+        // --- 4. LOGIKA GRY ---
+
+        function startGame() {
+            document.getElementById('start-screen').style.display = 'none';
+            document.getElementById('ui-container').style.display = 'block';
+
+            if (!map) initMap();
+
+            // Reset
+            score = 0;
+            remainingQuestions = [...locations]; // Kopia listy
+            // Mieszanie pytań (algorytm Fisher-Yates)
+            for (let i = remainingQuestions.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [remainingQuestions[i], remainingQuestions[j]] = [remainingQuestions[j], remainingQuestions[i]];
+            }
+
+            // Reset kolorów markerów
+            markers.forEach(m => setMarkerNeutral(m));
+
+            gameActive = true;
+            nextQuestion();
+        }
+
+        function nextQuestion() {
+            if (remainingQuestions.length === 0) {
+                endGame();
+                return;
+            }
+
+            currentTarget = remainingQuestions.pop();
+            attempts = 0;
+            updateUI(`Znajdź: <span style="color:#d35400">${currentTarget.name}</span>`, "");
+        }
+
+        function checkAnswer(marker, locationData) {
+            // Jeśli już rozwiązane (zielone), ignoruj
+            if (marker.options.fillColor === 'green') return;
+
+            if (locationData.name === currentTarget.name) {
+                // DOBRA ODPOWIEDŹ
+                setMarkerCorrect(marker);
+                score++;
+                let msg = "Dobrze!";
+                let msgClass = "correct";
+
+                if (attempts > 0) {
+                    msg = "Dobrze (po poprawce)";
+                    score--; // Mniej punktów za błędy
+                }
+
+                updateUI(null, msg, msgClass);
+                updateScore();
+
+                // Czekaj chwilę i zadaj następne pytanie
+                setTimeout(() => {
+                    nextQuestion();
+                }, 1000);
+
+            } else {
+                // ZŁA ODPOWIEDŹ
+                attempts++;
+                setMarkerWrong(marker);
+
+                // Jeśli kliknął źle, pokaż co kliknął
+                updateUI(null, `Źle! To jest: ${locationData.name}`, "wrong");
+
+                // Jeśli 3 razy źle, pokaż właściwy i idź dalej (opcjonalne, tu po prostu pozwalamy klikać dalej)
+                if (attempts >= 3) {
+                   // Opcjonalnie: podświetl właściwy marker
+                   highlightCorrectOne();
+                }
+            }
+        }
+
+        function highlightCorrectOne() {
+            markers.forEach(m => {
+                if (m.elementName === currentTarget.name) {
+                    m.setStyle({ color: 'orange', fillColor: 'orange', radius: 12 });
+                }
+            });
+        }
+
+        function setMarkerNeutral(marker) {
+            marker.setStyle({ color: '#3388ff', fillColor: '#3388ff', radius: 8 });
+        }
+
+        function setMarkerCorrect(marker) {
+            marker.setStyle({ color: 'green', fillColor: 'lime', radius: 10 });
+        }
+
+        function setMarkerWrong(marker) {
+            marker.setStyle({ color: 'red', fillColor: '#ffcccc' });
+            // Po chwili wróć do niebieskiego, chyba że to hard mode
+            setTimeout(() => {
+                if (marker.options.fillColor !== 'lime') { // jeśli w międzyczasie nie stał się poprawny
+                    setMarkerNeutral(marker);
+                }
+            }, 1500);
+        }
+
+        function updateUI(question, feedback, feedbackClass) {
+            if (question) document.getElementById('question-text').innerHTML = question;
+            if (feedback !== undefined) {
+                const fbEl = document.getElementById('feedback');
+                fbEl.innerText = feedback;
+                fbEl.className = feedbackClass || "";
+            }
+        }
+
+        function updateScore() {
+            document.getElementById('score-text').innerText = `Wynik: ${score} | Pozostało: ${remainingQuestions.length}`;
+        }
+
+        function endGame() {
+            gameActive = false;
+            let finalMsg = `Koniec gry! Twój wynik: ${score} / 66.`;
+            if (score === 66) finalMsg += " Perfekcyjnie!";
+            alert(finalMsg);
+            location.reload(); // Odśwież stronę by zagrać ponownie
+        }
+
+    </script>
+</body>
+</html>
